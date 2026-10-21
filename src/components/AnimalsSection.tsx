@@ -52,7 +52,10 @@ export default function AnimalsSection() {
                             Schwere Schicksale.{" "}<br /><em>Ein neues Zuhause.</em>
                         </Typography>
                         <Typography variant="body1" className={styles.lead}>
-                            Zu ihnen gehören klapperdürre Kätzchen aus einem Animal-Hoarding-Messiehaus oder ein Mutter-Tochter-Katzen-Duo, ausgesetzt auf einer Müllhalde, Kaninchen, eingepfercht auf ihren Exkrementen in einem Drahtverhau, ausgemergelt und jahrelang isoliert.
+                            Unsere Tiere kommen zu uns als Lebewesen mit einer eigenen Geschichte, eigenen Bedürfnissen und ihrem eigenen Tempo.
+                        </Typography>
+                        <Typography variant="body1">
+                            Darunter klapperdürre Kätzchen aus einem Animal-Hoarding-Messiehaus oder ein Mutter-Tochter-Katzen-Duo, ausgesetzt auf einer Müllhalde, Kaninchen, eingepfercht auf ihren Exkrementen in einem Drahtverhau, ausgemergelt und jahrelang isoliert.
                         </Typography>
                         <Typography variant="body1">
                             Die Katzen tollen nun durch Garten und über Naturschutzwiesen, die Kaninchen haben das erste Mal Gras unter den Pfoten und leben in einer harmonischen Großgruppe in einem weitläufigen Außengehege.

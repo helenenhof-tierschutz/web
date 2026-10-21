@@ -30,7 +30,10 @@ export default function FarmSection() {
                             Ein neuer Ort.{" "}<br /><em>Für ein gutes Leben.</em>
                         </Typography>
                         <Typography variant="body1" className={styles.lead}>
-                            Im Sommer 2027 werden alle Tiere auf den Helenenhof in Simmerath-Steckenborn ziehen. Dort erwartet sie ein weitläufiges Grundstück, ein mardersicheres Außengehege und für die Katzen Zugang ins Haus – für alle Vierbeiner ist selbstverständlich eine solide Rund-um-Versorgung garantiert.
+                            Im Sommer 2027 werden alle Tiere auf den Helenenhof in Simmerath-Steckenborn ziehen.
+                        </Typography>
+                        <Typography variant="body1">
+                            Dort erwartet sie ein weitläufiges Grundstück, ein mardersicheres Außengehege und für die Katzen Zugang ins Haus – für alle Vierbeiner ist selbstverständlich eine solide Rund-um-Versorgung garantiert.
                         </Typography>
                         <Typography variant="body1">
                             Aktuell wird in der Nordeifel ein Stallgebäude erweitert, da der Verein künftig Esel aus schlechter Haltung aufnehmen oder vom Schlachthof freikaufen wird. Der Aufbau einer kleinen Herde ist in Planung, Weidefläche steht zur Verfügung.

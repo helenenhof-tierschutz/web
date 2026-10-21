@@ -20,6 +20,10 @@ export default function AboutSection() {
                     </Typography>
 
                     <Typography component="p" variant="subtitle1" color="main">
+                        Wir möchten bewusst klein anfangen und verantwortungsvoll wachsen.
+                    </Typography>
+
+                    <Typography variant="body1" color="muted">
                         Ursprünglich war das eine Aachener Privatinitiative, die wir nun auf eine breitere Basis gestellt haben, um künftig noch mehr verwaisten Tieren ein sicheres Heim bieten zu können.
                     </Typography>
 
@@ -28,7 +32,6 @@ export default function AboutSection() {
                     </Typography>
 
                     <Typography variant="body1" color="muted">
-                        Wir möchten bewusst klein anfangen und verantwortungsvoll wachsen.
                         Jeder neue Bereich und jedes neu aufgenommene Tier soll langfristig gut versorgt sein.
                     </Typography>
                 </Grid>

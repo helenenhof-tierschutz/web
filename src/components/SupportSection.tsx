@@ -36,7 +36,10 @@ export default function SupportSection() {
                     Kleine Beiträge.{" "}<br /><em>Große Hilfe.</em>
                 </Typography>
                 <Typography variant="body1" className={styles.lead}>
-                    Über Unterstützung für die Tiere freuen wir uns. Tierpatenschaften und andere finanzielle Fördermöglichkeiten machen die Versorgung planbar und dauerhaft möglich.
+                    Über Unterstützung für die Tiere freuen wir uns.
+                </Typography>
+                <Typography variant="body1">
+                    Tierpatenschaften und andere finanzielle Fördermöglichkeiten machen die Versorgung planbar und dauerhaft möglich.
                 </Typography>
                 <Typography variant="body1">
                     Jeder Euro hilft. Etwas Sinnvolles zu tun, kann so einfach sein…
