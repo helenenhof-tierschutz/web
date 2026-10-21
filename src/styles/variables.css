@@ -1,0 +1,110 @@
+:root {
+    /* Source palette. Reference these tokens rather than repeating color literals. */
+    --palette-forest: #263b30;
+    --palette-forest-light: #354b3c;
+    --palette-forest-deep: #18271e;
+    --palette-cream: #faf8f2;
+    --palette-cream-dark: #f0ede3;
+    --palette-terracotta: #c87553;
+    --palette-terracotta-dark: #b56646;
+    --palette-terracotta-light: #efb79a;
+    --palette-muted: #72786e;
+    --palette-white: #ffffff;
+    --palette-border: #e1dccf;
+    --palette-border-muted: #d9d5c9;
+    --palette-border-soft: #e5e0d5;
+    --palette-border-softer: #e9e4d8;
+    --palette-map-land: #e5eadf;
+    --palette-map-road: #f8f5e9;
+    --palette-map-field: #d4dfcf;
+    --palette-selection: #d8e1d4;
+
+    /* Semantic colors for the default light theme. */
+    --color-main: var(--palette-forest);
+    --color-main-light: var(--palette-forest-light);
+    --color-cream: var(--palette-cream);
+    --color-cream-dark: var(--palette-cream-dark);
+    --color-accent: var(--palette-terracotta);
+    --color-accent-hover: var(--palette-terracotta-dark);
+    --color-accent-light: var(--palette-terracotta-light);
+    --color-text: var(--color-main);
+    --color-text-light: var(--palette-muted);
+    --color-bg-light: var(--palette-white);
+    --color-white: var(--palette-white);
+    --color-on-main: var(--palette-white);
+    --color-on-accent: var(--palette-white);
+    --color-border: var(--palette-border);
+    --color-border-muted: var(--palette-border-muted);
+    --color-border-soft: var(--palette-border-soft);
+    --color-border-softer: var(--palette-border-softer);
+    --color-map-land: var(--palette-map-land);
+    --color-map-road: var(--palette-map-road);
+    --color-map-field: var(--palette-map-field);
+    --color-selection: var(--palette-selection);
+
+    /* Semantic section surfaces */
+    --surface-none: transparent;
+    --surface-soft: var(--color-cream-dark);
+    --surface-medium: var(--color-bg-light);
+    --surface-strong: var(--color-main);
+
+    /* Typography */
+    --font-sans: "DM Sans", sans-serif;
+    --font-serif: "Playfair Display", Georgia, serif;
+
+    /* Layout */
+    --container-width: 1160px;
+    --container-width-narrow: 860px;
+    --page-gutter: 32px;
+    --section-space: 112px;
+    --section-space-compact: 76px;
+    --section-space-intro: clamp(56px, 7vw, 92px);
+    --section-space-reading-start: 56px;
+    --section-space-reading-end: 100px;
+    --section-space-reading-start-mobile: 42px;
+    --section-space-reading-end-mobile: 72px;
+    --grid-spacing-unit: 8px;
+    --header-height: 92px;
+
+    /* Borders and interaction */
+    --border-color: var(--color-border);
+    --border-radius: 3px;
+    --transition-fast: 180ms ease;
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+    --color-main: var(--palette-cream);
+    --color-main-light: var(--palette-cream-dark);
+    --color-cream: var(--palette-forest);
+    --color-cream-dark: var(--palette-forest-light);
+    --color-accent: var(--palette-terracotta-light);
+    --color-accent-hover: var(--palette-terracotta);
+    --color-accent-light: var(--palette-terracotta-light);
+    --color-text: var(--color-main);
+    --color-text-light: var(--palette-cream-dark);
+    --color-bg-light: var(--palette-forest-light);
+    --color-on-main: var(--palette-forest);
+    --color-on-accent: var(--palette-forest);
+    --color-border: color-mix(in srgb, var(--palette-cream) 22%, transparent);
+    --color-border-muted: color-mix(in srgb, var(--palette-cream) 30%, transparent);
+    --color-border-soft: color-mix(in srgb, var(--palette-cream) 18%, transparent);
+    --color-border-softer: color-mix(in srgb, var(--palette-cream) 14%, transparent);
+    --color-map-land: var(--palette-forest-light);
+    --color-map-road: var(--palette-cream-dark);
+    --color-map-field: var(--palette-forest);
+    --color-selection: var(--palette-forest-light);
+    --surface-none: transparent;
+    --surface-soft: color-mix(in srgb, var(--palette-cream) 5%, var(--palette-forest));
+    --surface-medium: color-mix(in srgb, var(--palette-cream) 12%, var(--palette-forest));
+    --surface-strong: var(--color-main);
+    --border-color: var(--color-border);
+}
+
+@media (max-width: 760px) {
+    :root {
+        --page-gutter: 20px;
+        --section-space: 76px;
+        --header-height: 78px;
+    }
+}
