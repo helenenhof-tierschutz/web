@@ -1,6 +1,7 @@
 {
   "name": "web",
-  "private": true,
+  "private": false,
+  "homepage": "https://helenenhof-tierschutz.github.io/web",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
