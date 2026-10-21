@@ -1,3 +1,4 @@
+import Button from "./Button";
 import Grid from "./Grid";
 import Image from "./Image";
 import Section from "./Section";
@@ -34,6 +35,8 @@ export default function AboutSection() {
                     <Typography variant="body1" color="muted">
                         Jeder neue Bereich und jedes neu aufgenommene Tier soll langfristig gut versorgt sein.
                     </Typography>
+
+                    <Button href="/ueber-uns">Mehr über uns</Button>
                 </Grid>
 
                 <Grid size={{ xs: 12, md: 6 }}>

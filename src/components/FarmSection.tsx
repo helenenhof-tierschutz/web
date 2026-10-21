@@ -38,7 +38,7 @@ export default function FarmSection() {
                         <Typography variant="body1">
                             Aktuell wird in der Nordeifel ein Stallgebäude erweitert, da der Verein künftig Esel aus schlechter Haltung aufnehmen oder vom Schlachthof freikaufen wird. Der Aufbau einer kleinen Herde ist in Planung, Weidefläche steht zur Verfügung.
                         </Typography>
-                        <Button href="/ueber-uns">Mehr über den Hof</Button>
+                        <Button href="/helenenhof">Mehr über den Hof</Button>
                     </div>
                 </Grid>
                 <Grid size={{ xs: 12, md: 6 }}>

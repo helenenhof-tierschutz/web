@@ -1,5 +1,4 @@
 import { css } from "@emotion/css";
-import Box from "./Box";
 import Grid from "./Grid";
 import Section from "./Section";
 import Typography from "./Typography";
@@ -12,10 +11,12 @@ const styles = {
         @media (max-width: 640px) { margin-bottom: 30px; }
     `,
     memberInfo: css`
-        padding-top: 18px;
+        height: 100%;
+        padding: clamp(24px, 3vw, 36px);
+        background: var(--color-cream-dark);
         h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.3; }
         p { margin: 0; color: var(--color-text-light); font-size: 0.9rem; line-height: 1.6; }
-        .memberDescription { margin-top: 12px; }
+        p:last-child { margin-top: 12px; }
     `,
 };
 
@@ -25,19 +26,16 @@ const vorstandMembers = [
         role: "Vorsitzende",
         description:
             "Als leidenschaftliche Tierfreundin hat Ursula Kals den Helenenhof ins Leben gerufen. Mit viel Herzblut setzt sie sich dafür ein, Tieren in Not ein sicheres Zuhause zu geben.",
-        image: "/images/ursula-kals.webp",
     },
     {
         name: "Claus M. Wolf",
         role: "Stellvertretender Vorsitzender",
         description:
             "Claus Wolf ist Katzenliebhaber durch und durch. In seinem Zuhause im schönen Eilendorf dreht sich vieles um seine geliebten Vierbeiner.",
-        image: "/images/claus-wolf.jpg",
     },
     {
         name: "Constantin Kals",
         role: "Schatzmeister",
-        image: "/images/constantin-kals.jpg",
         description:
             "Constantin Kals kümmert sich um die Finanzen und die Organisation im Hintergrund. Bei Fragen zu Spenden und finanzieller Unterstützung ist er der richtige Ansprechpartner.",
     },
@@ -58,19 +56,6 @@ export default function VorstandSection() {
                         size={{ xs: 12, md: 4 }}
                         key={member.name}
                     >
-                        <Box
-                            as="img"
-                            sx={{
-                                width: "100%",
-                                aspectRatio: { xs: "4 / 3", sm: "4 / 5" },
-                                objectFit: "cover",
-                                objectPosition: { xs: "center 35%", sm: "center 28%" },
-                                backgroundColor: "var(--color-cream-dark)",
-                            }}
-                            src={member.image}
-                            alt={member.name}
-                            loading="lazy"
-                        />
                         <div className={styles.memberInfo}>
                             <Typography variant="h3">{member.name}</Typography>
                             <Typography variant="body1">{member.role}</Typography>

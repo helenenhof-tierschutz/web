@@ -5,6 +5,7 @@ import ImpressumPage from "./pages/ImpressumPage";
 import SatzungPage from "./pages/SatzungPage";
 import DatenschutzPage from "./pages/DatenschutzPage";
 import AboutPage from "./pages/AboutPage";
+import FarmPage from "./pages/FarmPage";
 import SupportPage from "./pages/SupportPage";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
           path="/ueber-uns"
           element={<AboutPage />}
         />
+        <Route path="/helenenhof" element={<FarmPage />} />
         <Route path="/unterstuetzen" element={<SupportPage />} />
         <Route path="/satzung" element={<SatzungPage />} />
         <Route path="/impressum" element={<ImpressumPage />} />
