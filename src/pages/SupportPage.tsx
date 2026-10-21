@@ -28,6 +28,7 @@ const supportOptions = [
         text: "Eine Patenschaft unterstützt die Versorgung eines Tieres. Die Einzelheiten stimmen wir persönlich mit Ihnen ab.",
         href: "mailto:info@helenenhof-tierschutz.de?subject=Tierpatenschaft%20anfragen",
         action: "Patenschaft anfragen",
+        id: "patenschaft",
     },
     {
         title: "Mitglied werden",
@@ -155,7 +156,7 @@ export default function SupportPage() {
                 <Grid container spacing={3}>
                     {supportOptions.map((option) => (
                         <Grid key={option.title} size={{ xs: 12, sm: 6, lg: 3 }}>
-                            <Card surface="paper" hoverable sx={{ height: "100%" }}>
+                            <Card surface="paper" hoverable sx={{ height: "100%" }} id={option.id}>
                                 <div className={styles.optionContent}>
                                     <Typography variant="eyebrow">{option.label}</Typography>
                                     <Typography variant="h3">{option.title}</Typography>

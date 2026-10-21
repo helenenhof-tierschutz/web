@@ -5,79 +5,75 @@ import Section from "./Section";
 import Typography from "./Typography";
 
 const styles = {
-    sectionHeading: css`
+    heading: css`
         max-width: 670px;
         margin: 0 auto 56px;
         text-align: center;
-        h2 {
-            margin-top: 0;
-            margin-bottom: 26px;
-        }
-        & > p { max-width: 540px; margin: 0 auto; color: var(--color-text-light); font-size: 0.96rem; line-height: 1.9; }
+        h2 { margin: 0; }
         @media (max-width: 760px) { margin-bottom: 36px; }
+    `,
+    card: css`
+        h3 { margin-bottom: 16px; }
+        p { line-height: 1.7; }
+        p:last-child { margin-bottom: 0; }
     `,
 };
 
 const missions = [
     {
-        title: "Aufnahme & Unterbringung",
-        text: "Wir nehmen hilfsbedürftige, ausgesetzte oder vernachlässigte Tiere auf, pflegen und versorgen sie und bringen sie artgerecht unter.",
+        title: "Aufnahme und artgerechte Unterbringung",
+        paragraphs: [
+            "Wir nehmen hilfsbedürftige, ausgesetzte oder vernachlässigte Tiere auf, pflegen und versorgen sie und bringen sie artgerecht unter.",
+            "Nach Jahren der Vernachlässigung legen wir Wert darauf, den Tieren ordentliches, frisches Futter und ein dauerhaftes Heim zu bieten.",
+        ],
     },
     {
         title: "Tierärztliche Versorgung",
-        text: "Tierärztliche Untersuchungen, Impfungen, Medikamente und notwendige Pflegemaßnahmen gehören zu den wichtigsten, aber auch kostenintensivsten Teilen unserer Arbeit.",
+        paragraphs: [
+            "Tierärztliche Untersuchungen, Behandlungen, Impfungen, Medikamente und notwendige Pflegemaßnahmen gehören zu den wichtigsten, aber auch kostenintensivsten Teilen unserer Arbeit.",
+            "Viele Tiere kommen in schlechtem Zustand zu uns und benötigen eine umfassende medizinische Versorgung.",
+        ],
     },
     {
-        title: "Vermittlung & Netzwerk",
-        text: "Wir arbeiten mit Tierärzten, Pflegestellen und anderen Tierschutzorganisationen zusammen. Tiere vermitteln wir grundsätzlich auch in geeignete und verantwortungsvolle Haltungen.",
+        title: "Zusammenarbeit und Vermittlung im Netzwerk",
+        paragraphs: [
+            "Wir bauen derzeit die Zusammenarbeit mit Tierärzten, anderen Tierschutzorganisationen und Pflegestellen aus.",
+            "Tiere vermitteln wir grundsätzlich auch in geeignete und verantwortungsvolle Haltungen, aber nur dann, wenn es im Einzelfall dem Tierwohl entspricht.",
+        ],
+    },
+    {
+        title: "Tierpatenschaften und Förderung",
+        paragraphs: [
+            "Über Unterstützung für die Tiere freuen wir uns. Tierpatenschaften und andere finanzielle Fördermöglichkeiten machen die Versorgung planbar und dauerhaft möglich.",
+        ],
     },
     {
         title: "Aufklärung der Öffentlichkeit",
-        text: "Wir informieren über artgerechte Tierhaltung und Tierschutz, machen die Bedürfnisse der Tiere sichtbar und bemühen uns, Wissen über einen anständigen Umgang mit Lebewesen zu vermitteln.",
+        paragraphs: [
+            "Wir informieren über artgerechte Tierhaltung und Tierschutz, machen die Bedürfnisse der Tiere sichtbar und bemühen uns, Wissen über einen anständigen Umgang mit Lebewesen zu vermitteln.",
+            "Besuche auf dem Hof sind nach Voranmeldung möglich. Hoffeste sind geplant. Ebenso kurzweilige Nachmittage mit Kindern, Senioren oder anderen Interessierten, denen wir vor Ort zeigen möchten, wie bereichernd der Kontakt zu Tieren sein kann.",
+            "Gemäß dem Motto: „leise, langsam, liebevoll“.",
+        ],
     },
 ];
 
 export default function MissionSection() {
     return (
-        <Section
-            surface="soft"
-            id="unsere-arbeit"
-        >
-            <div className={styles.sectionHeading}>
-                <Typography variant="eyebrow">Was uns wichtig ist</Typography>
-
+        <Section surface="soft" id="unsere-arbeit">
+            <div className={styles.heading}>
+                <Typography variant="eyebrow">Was wir tun</Typography>
                 <Typography variant="h2" size="display">
-                    Tierschutz, der
-                    <br />
-                    <em>vor Ort ankommt.</em>
-                </Typography>
-
-                <Typography variant="body1">
-                    Verantwortung bedeutet für uns, hinzusehen,
-                    zu handeln und jedem Tier die Fürsorge zu geben,
-                    die es braucht.
+                    Mit Herz und Verstand.{" "}<br /><em>Für jedes Tier.</em>
                 </Typography>
             </div>
-
             <Grid container spacing={{ xs: 2, lg: 2.25 }}>
                 {missions.map((mission) => (
-                    <Grid
-                        as="div"
-                        size={{ xs: 12, sm: 6, lg: 3 }}
-                        key={mission.title}
-                    >
-                        <Card
-                            as="article"
-                            surface="soft"
-                            hoverable
-                            sx={{
-                                position: "relative",
-                                minHeight: { xs: "unset", sm: 270, lg: 310 },
-                                padding: { xs: 24, sm: "27px 23px" },
-                            }}
-                        >
-                            <Typography variant="h3" gutterBottom>{mission.title}</Typography>
-                            <Typography variant="body2" color="muted">{mission.text}</Typography>
+                    <Grid size={{ xs: 12, sm: 6, lg: 4 }} key={mission.title}>
+                        <Card as="article" surface="paper" className={styles.card} sx={{ padding: { xs: 24, sm: "27px 23px" } }}>
+                            <Typography variant="h3">{mission.title}</Typography>
+                            {mission.paragraphs.map((paragraph) => (
+                                <Typography variant="body2" color="muted" key={paragraph}>{paragraph}</Typography>
+                            ))}
                         </Card>
                     </Grid>
                 ))}

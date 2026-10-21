@@ -8,7 +8,7 @@ const styles = {
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 630px;
+    min-height: 650px;
     overflow: hidden;
     isolation: isolate;
     @media (max-width: 760px) {
@@ -22,7 +22,7 @@ const styles = {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 48%;
+    object-position: center 52%;
   `,
   overlay: css`
     position: absolute;
@@ -31,9 +31,9 @@ const styles = {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg,
-      color-mix(in srgb, var(--palette-forest-deep) 90%, transparent) 0%,
-      color-mix(in srgb, var(--palette-forest-deep) 72%, transparent) 44%,
-      color-mix(in srgb, var(--palette-forest-deep) 14%, transparent) 100%);
+      color-mix(in srgb, var(--palette-forest-deep) 94%, transparent) 0%,
+      color-mix(in srgb, var(--palette-forest-deep) 82%, transparent) 43%,
+      color-mix(in srgb, var(--palette-forest-deep) 10%, transparent) 100%);
     @media (max-width: 760px) {
       background: linear-gradient(90deg,
         color-mix(in srgb, var(--palette-forest-deep) 88%, transparent),
@@ -49,12 +49,19 @@ const styles = {
     margin-bottom: 24px;
   `,
   description: css`
-    max-width: 520px;
-    margin-bottom: 32px;
+    max-width: 610px;
+    margin-bottom: 20px;
     color: var(--color-cream-dark);
     font-size: 1rem;
-    line-height: 1.85;
+    line-height: 1.7;
     @media (max-width: 760px) { font-size: 0.94rem; }
+  `,
+  lead: css`
+    max-width: 610px;
+    color: var(--color-white);
+    font-family: var(--font-serif);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    line-height: 1.55;
   `,
   actions: css`
     display: flex;
@@ -74,8 +81,8 @@ export default function Hero() {
     <Section surface="strong" width="full" spacing="none" className={styles.hero}>
       <img
         className={styles.image}
-        src="/images/8244ED9C-F66E-4908-BE66-2032255CF58A.jpeg"
-        alt="Der Helenenhof"
+        src="/images/home/kaninchen-beim-fressen.webp"
+        alt="Mehrere Kaninchen fressen gemeinsam Gemüse von einem Teller"
         fetchPriority="high"
       />
 
@@ -83,26 +90,26 @@ export default function Hero() {
 
       <div className={`container ${styles.content}`}>
         <Typography variant="eyebrow">
-          Tierschutz in der Nordeifel
+          Willkommen beim Helenenhof
         </Typography>
 
         <Typography variant="h1" size="display" className={styles.title}>
-          Jedes Tier verdient
+          Tierschutz, der{" "}
           <br />
-          ein <em>sicheres Zuhause.</em>
+          <em>vor Ort ankommt.</em>
+        </Typography>
+
+        <Typography variant="body1" className={styles.lead}>
+          Gern möchten wir uns Ihnen und Euch kurz vorstellen.
         </Typography>
 
         <Typography variant="body1" className={styles.description}>
-          Wir geben Tieren aus schwierigen Verhältnissen eine neue Chance – mit Zeit, Fürsorge und einem Leben, das ihren Bedürfnissen gerecht wird.
+          Wir sind ein kleiner Verein, dem das Wohl der Tiere am Herzen liegt. Klein sind wir im wortwörtlichsten Sinn: Denn zur Zeit beherbergen wir Kaninchen und Katzen, die vorrangig durch private Vermittlung zu uns gekommen sind, weil sie dringend ein gutes, artgerechtes Zuhause benötigt haben.
         </Typography>
 
         <div className={styles.actions}>
-          <Button href="#unsere-arbeit">
-            Unsere Arbeit kennenlernen
-          </Button>
-
-          <Button href="#unterstuetzen" variant="light">
-            Wie Sie helfen können
+          <Button href="#unsere-schuetzlinge">
+            Unsere Schützlinge kennenlernen
           </Button>
         </div>
       </div>
