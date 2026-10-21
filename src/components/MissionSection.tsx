@@ -38,7 +38,7 @@ const missions = [
         title: "Zusammenarbeit und Vermittlung im Netzwerk",
         paragraphs: [
             "Wir bauen derzeit die Zusammenarbeit mit Tierärzten, anderen Tierschutzorganisationen und Pflegestellen aus.",
-            "Tiere vermitteln wir grundsätzlich auch in geeignete und verantwortungsvolle Haltungen, aber nur dann, wenn es im Einzelfall dem Tierwohl entspricht.",
+            "Tiere vermitteln wir grundsätzlich auch in geeignete und verantwortungsvolle Haltungen – aber nur dann, wenn es im Einzelfall dem Tierwohl entspricht.",
         ],
     },
     {
@@ -52,7 +52,7 @@ const missions = [
         paragraphs: [
             "Wir informieren über artgerechte Tierhaltung und Tierschutz, machen die Bedürfnisse der Tiere sichtbar und bemühen uns, Wissen über einen anständigen Umgang mit Lebewesen zu vermitteln.",
             "Besuche auf dem Hof sind nach Voranmeldung möglich. Hoffeste sind geplant. Ebenso kurzweilige Nachmittage mit Kindern, Senioren oder anderen Interessierten, denen wir vor Ort zeigen möchten, wie bereichernd der Kontakt zu Tieren sein kann.",
-            "Gemäß dem Motto: „leise, langsam, liebevoll“.",
+            "Gemäß dem Motto – „leise, langsam, liebevoll“.",
         ],
     },
 ];

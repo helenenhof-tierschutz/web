@@ -24,7 +24,7 @@ export default function AboutSection() {
                     </Typography>
 
                     <Typography variant="body1" color="muted">
-                        So haben wir in einer generationsübergreifenden Gründungsgruppe, der Jüngste 18 Jahre, die Älteste 74 Jahre, den Verein ins Leben gerufen.
+                        So haben wir in einer generationsübergreifenden Gründungsgruppe – der Jüngste 18 Jahre, die Älteste 74 Jahre – den Verein ins Leben gerufen.
                     </Typography>
 
                     <Typography variant="body1" color="muted">

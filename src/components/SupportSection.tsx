@@ -39,7 +39,7 @@ export default function SupportSection() {
                     Über Unterstützung für die Tiere freuen wir uns. Tierpatenschaften und andere finanzielle Fördermöglichkeiten machen die Versorgung planbar und dauerhaft möglich.
                 </Typography>
                 <Typography variant="body1">
-                    Jeder Euro hilft. Etwas Sinnvolles zu tun, kann so einfach sein …
+                    Jeder Euro hilft. Etwas Sinnvolles zu tun, kann so einfach sein…
                 </Typography>
             </div>
             <div className={styles.actions} aria-label="Möglichkeiten zu helfen">
