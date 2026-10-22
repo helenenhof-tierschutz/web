@@ -11,6 +11,7 @@ Stand: 22. Oktober 2026. Diese Änderungen liegen im Arbeitsbranch und sind nich
 - **Kontakt:** Eigene Seite mit Adresse, anklickbarer E-Mail, Besuchshinweis, Hofbild und Karte.
 - **Navigation:** Kontakt ist im Kopf- und Fußbereich verlinkt; die Tierprofile führen zur Patenschaftsanfrage. Die Startseite erhielt die korrigierten Hinweise zu Patenschaften und Besuchen. Die Satzung wurde nur für saubere HTML-Struktur und Listenreihenfolge angepasst; der Rechtstext blieb unverändert.
 - **Bildgestaltung:** Die Einstiegsbereiche von „Über uns“, „Unsere Schützlinge“ und „Kontakt“ zeigen Archivfotos. Inhaltsfotos, Tierkarten und Teamfotos erhalten den einheitlichen, leicht nach rechts unten versetzten Kasten; auf beigem Hintergrund bleibt er sichtbar.
+- **Startseite:** Die fünf Karten im Bereich „Was wir tun“ haben passende, einheitliche Linien-Icons für Unterbringung, Versorgung, Netzwerk, Förderung und Aufklärung.
 
 ## B. Übernommene Originaltexte
 
