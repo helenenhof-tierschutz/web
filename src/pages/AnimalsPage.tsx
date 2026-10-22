@@ -162,7 +162,7 @@ export default function AnimalsPage() {
                 </Grid>
             </Section>
 
-            <Section surface="none" id="katzen">
+            <Section surface="soft" id="katzen">
                 <div className={styles.copy}>
                     <Typography variant="eyebrow">Unsere Katzen</Typography>
                     <Typography variant="h2" size="display">
