@@ -28,13 +28,14 @@ Maßgebliche Quellen waren die [Startseite](https://sites.google.com/view/helene
 
 ## D. Eingesetzte Bilder
 
-Alle Tierbilder stammen aus dem vom Verein freigegebenen lokalen Helenenhof-Bildarchiv. Die Namen der Bilddateien beschreiben den sichtbaren Inhalt. Für die Katzen und Kaninchen ist die individuelle Zuordnung **vorläufig**; der Verein hat ausdrücklich eine Zuordnung nach sichtbaren Merkmalen zur späteren Korrektur erlaubt.
+Alle Tierbilder stammen aus dem vom Verein freigegebenen lokalen Helenenhof-Bildarchiv. Die Namen der Bilddateien beschreiben den sichtbaren Inhalt. Miro ist verbindlich zugeordnet; Milena und Minzini teilen als Geschwister bewusst ein Foto. Die übrigen Katzen- und Kaninchenzuordnungen sind vorläufig und können nach sichtbaren Merkmalen später korrigiert werden.
 
 | Profil | Bildauswahl | Grundlage der vorläufigen Zuordnung |
 | --- | --- | --- |
-| Miro | rötliche getigerte Katze am Drahtnetz | vom Verein als rötliche Katze beschrieben |
-| Stella, Milena | graue getigerte Katze vor Gehege | noch keine sichere Einzelzuordnung |
-| Minou, Minzini | orange-weiße Katze im Gras | noch keine sichere Einzelzuordnung |
+| Miro | rötliche Katze im Gras | verbindlich durch den Verein zugeordnet |
+| Stella | rötliche Katze auf dem dunklen Netz, anderer Bildausschnitt | noch keine sichere Einzelzuordnung |
+| Minou | rötliche Katze auf dem dunklen Netz | noch keine sichere Einzelzuordnung |
+| Milena, Minzini | graue getigerte Katze vor dem Gehege | Geschwister, die bewusst ein Foto teilen |
 | Blacky | schwarzes Schlappohrkaninchen rechts auf der Wiese | Fell und Schlappohren |
 | Alfi | weißes Schlappohrkaninchen links auf der Wiese | Fell und Schlappohren |
 | Hasi | braunes Schlappohrkaninchen vor dem Stall | Fell und Schlappohren; schwarze Partien nicht eindeutig |
@@ -46,8 +47,8 @@ Hof- und Naturseiten verwenden weitere Bilder aus den entsprechenden Archivordne
 
 ## E. Noch offene Fragen vor Veröffentlichung
 
-1. Die einzelnen Tierbilder den Namen verbindlich zuordnen; derzeit sind mehrere Katzenfotos doppelt verwendet und die Kaninchenbilder nur anhand äußerer Merkmale zugeordnet.
-2. Bankdaten und Mitgliedsbeiträge noch einmal durch den Verein freigeben. Die ursprüngliche Seite nennt 40 Euro für Familien und 180 Euro für juristische Personen; diese Kategorien fehlen in der vorhandenen Beitrittserklärung und sind deshalb auf der Website mit einem Hinweis versehen.
+1. Die Fotos von Stella und Minou verbindlich den Namen zuordnen; die Kaninchenbilder sind weiterhin nur anhand äußerer Merkmale zugeordnet.
+2. Bankdaten und Mitgliedsbeiträge noch einmal durch den Verein freigeben. Die ursprüngliche Seite nennt 40 Euro für Familien und 180 Euro für juristische Personen; diese Kategorien fehlen in der vorhandenen Beitrittserklärung und sollten innerhalb des Vereins abgestimmt werden.
 3. Impressum und Datenschutzerklärung fachlich prüfen. Die alte Google-Sites-Datenschutzerklärung beschreibt andere technische Dienste. Die aktuelle Seite lädt Schriftarten lokal und die Karte erst nach einem Klick. Der Ursprungstext des Impressums enthält eine abweichend geschriebene E-Mail-Adresse; die Website nutzt die vom Verein angegebene Adresse. Vorstandsbezeichnungen und eventuelle Titel sollten ebenfalls bestätigt werden.
 4. Zusagen zu regelmäßigen Patenschaftsinformationen wurden nicht übernommen, weil sie nicht bestätigt sind.
 

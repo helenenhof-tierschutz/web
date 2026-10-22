@@ -37,33 +37,33 @@ const styles = {
 const cats = [
     {
         name: "Miro",
-        image: "/images/animals/orange-getigerte-katze.webp",
-        alt: "Rötliche Katze auf einem dunklen Netz",
+        image: "/images/home/orange-weisse-katze.webp",
+        alt: "Rötliche Katze sitzt im Gras vor violetten Blüten",
         description: "Miro wuchs an einer Tankstelle auf, bevor er zu uns kam. Heute gehört der rötliche Kater zu unserer Katzengruppe und hat hier einen festen Platz.",
     },
     {
         name: "Stella",
-        image: "/images/home/graue-katze.webp",
-        alt: "Grau getigerte Katze vor einem Gehege",
+        image: "/images/animals/orange-getigerte-katze-auf-drahtnetz-beschnitt.png",
+        alt: "Rötliche Katze liegt auf einem dunklen Netz und streckt eine Pfote aus",
         description: "Stella gehört zu den Katzen auf dem Helenenhof. Gemeinsam mit den anderen findet sie hier Ruhe, Platz und einen geschützten Alltag.",
     },
     {
         name: "Minou",
-        image: "/images/home/orange-weisse-katze.webp",
-        alt: "Orange-weiße Katze im Gras",
+        image: "/images/animals/orange-getigerte-katze.webp",
+        alt: "Rötliche Katze liegt auf einem dunklen Netz",
         description: "Minou ist Teil unserer Katzengruppe. Auf dem Hof darf sie ankommen und das Leben mit Garten, Wiesen und den anderen Katzen genießen.",
     },
     {
         name: "Milena",
         image: "/images/home/graue-katze.webp",
         alt: "Grau getigerte Katze vor einem Gehege",
-        description: "Milena gehört zu unseren Schützlingen. Für sie zählt vor allem ein verlässlicher Ort, an dem sie versorgt ist und einfach Katze sein kann.",
+        description: "Milena ist Minzinis Schwester und gehört zu unseren Schützlingen. Beide haben auf dem Helenenhof einen geschützten Alltag und teilen deshalb bewusst dieses Foto.",
     },
     {
         name: "Minzini",
-        image: "/images/home/orange-weisse-katze.webp",
-        alt: "Orange-weiße Katze im Gras",
-        description: "Minzini lebt gemeinsam mit den anderen Katzen auf dem Helenenhof. Sie gehört zu einer Gruppe, die nach schwierigen Erfahrungen ein sicheres Zuhause gefunden hat.",
+        image: "/images/home/graue-katze.webp",
+        alt: "Grau getigerte Katze vor einem Gehege",
+        description: "Minzini ist Milenas Schwester und Teil unserer Katzengruppe. Als Geschwister teilen die beiden auch auf dieser Seite bewusst ein gemeinsames Foto.",
     },
 ];
 
@@ -193,8 +193,9 @@ export default function AnimalsPage() {
                     ))}
                 </div>
                 <p className={styles.note}>
-                    Die Zuordnung der Fotos zu den einzelnen Katzen ist vorläufig.
-                    Weitere persönliche Geschichten ergänzen wir nach der Abstimmung mit dem Verein.
+                    Miro ist seinem Foto verbindlich zugeordnet. Milena und Minzini sind
+                    Geschwister und teilen bewusst ein Foto. Die Zuordnung der übrigen
+                    Katzenfotos ist vorläufig.
                 </p>
                 <Button href="/unterstuetzen#patenschaften">Tierpatenschaft anfragen</Button>
             </Section>
