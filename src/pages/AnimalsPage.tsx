@@ -51,91 +51,84 @@ const styles = {
 const cats = [
     {
         name: "Miro",
-        headline: "Der mutige Mäusejäger Miro",
         image: "/images/animals/orange-getigerte-katze.webp",
         alt: "Rötliche Katze auf einem dunklen Netz",
-        description: "Er wuchs an einer Tankstelle auf, bevor er zu uns kam.",
+        description: "Miro wuchs an einer Tankstelle auf, bevor er zu uns kam. Heute gehört der rötliche Kater zu unserer Katzengruppe und hat hier einen festen Platz.",
     },
     {
         name: "Stella",
-        headline: "Die sanfte Schmusekatze Stella",
         image: "/images/home/graue-katze.webp",
         alt: "Grau getigerte Katze vor einem Gehege",
+        description: "Stella gehört zu den Katzen auf dem Helenenhof. Gemeinsam mit den anderen findet sie hier Ruhe, Platz und einen geschützten Alltag.",
     },
     {
         name: "Minou",
-        headline: "Die muntere Mieze Minou",
         image: "/images/home/orange-weisse-katze.webp",
         alt: "Orange-weiße Katze im Gras",
+        description: "Minou ist Teil unserer Katzengruppe. Auf dem Hof darf sie ankommen und das Leben mit Garten, Wiesen und den anderen Katzen genießen.",
     },
     {
         name: "Milena",
-        headline: "Die muckelige Mini-Milena",
         image: "/images/home/graue-katze.webp",
         alt: "Grau getigerte Katze vor einem Gehege",
+        description: "Milena gehört zu unseren Schützlingen. Für sie zählt vor allem ein verlässlicher Ort, an dem sie versorgt ist und einfach Katze sein kann.",
     },
     {
         name: "Minzini",
-        headline: "Die majestätische Madame Minzini",
         image: "/images/home/orange-weisse-katze.webp",
         alt: "Orange-weiße Katze im Gras",
+        description: "Minzini lebt gemeinsam mit den anderen Katzen auf dem Helenenhof. Sie gehört zu einer Gruppe, die nach schwierigen Erfahrungen ein sicheres Zuhause gefunden hat.",
     },
 ];
 
 const rabbits = [
     {
         name: "Blacky",
-        headline: "Der bestimmende Boss Blacky",
         image: "/images/home/kaninchen-auf-wiese.webp",
         imagePosition: "right center",
         imageZoom: 1.65,
         imageOrigin: "right center",
         alt: "Schwarzes Schlappohrkaninchen rechts auf einer Wiese",
-        description: "Blacky kam von Eva zu uns. Der schwarze Schlappohr-Rammler gehört zu den bestimmenden Tieren der Gruppe. Alfi ist allerdings noch dominanter als er.",
+        description: "Blacky gehört zu den neueren Tieren unserer Kaninchengruppe. Der schwarze Schlappohr-Rammler zählt zu den bestimmenden Tieren – auch wenn Alfi noch entschiedener auftritt.",
     },
     {
         name: "Alfi",
-        headline: "Der allmächtige Anführer Alfi",
         image: "/images/home/kaninchen-auf-wiese.webp",
         imagePosition: "left center",
         imageZoom: 1.65,
         imageOrigin: "left center",
         alt: "Weißes Schlappohrkaninchen links auf einer Wiese",
-        description: "Alfi ist der weiße Schlappohr-Rammler der Gruppe. Er ist besonders dominant, sogar noch dominanter als Blacky. Er hört nur eingeschränkt; ob er vollständig taub ist, wissen wir nicht sicher.",
+        description: "Alfi ist der weiße Schlappohr-Rammler der Gruppe und tritt besonders bestimmt auf. Er steht noch über Blacky in der Rangordnung. Alfi hört nur eingeschränkt; ob er vollständig taub ist, wissen wir nicht sicher.",
     },
     {
         name: "Hasi",
-        headline: "Die herzallerliebste Hängeohr-Hasi",
         image: "/images/home/kaninchen-vor-stall.webp",
         imagePosition: "center 57%",
         imageZoom: 1,
         imageOrigin: "center center",
         alt: "Braunes Schlappohrkaninchen mit dunklen Fellpartien vor einem Stall",
-        description: "Hasi kam von Eva zu uns. Ihr Fell ist braun mit schwarzen Partien, und ihre Ohren hängen seitlich herunter.",
+        description: "Hasi gehört zu den neueren Tieren unserer Kaninchengruppe. Ihr braunes Fell hat schwarze Partien, und ihre Schlappohren geben ihr ein ganz eigenes Aussehen.",
     },
     {
         name: "Trixi",
-        headline: "Die tapfere Tieroma Trixi",
         image: "/images/animals/kaninchen-am-futternapf.webp",
         imagePosition: "right center",
         imageZoom: 1.65,
         imageOrigin: "right center",
         alt: "Schwarzes Kaninchen mit aufrechten Ohren rechts am Futternapf",
-        description: "Trixi ist mit deutlichem Abstand das älteste Kaninchen unserer Gruppe. Sie hat schwarzes Fell und aufrecht stehende Ohren.",
+        description: "Trixi ist mit deutlichem Abstand das älteste Kaninchen unserer Gruppe. Mit ihrem schwarzen Fell und den aufrecht stehenden Ohren ist sie ein vertrauter Teil des Geheges.",
     },
     {
         name: "Kuki",
-        headline: "Die königliche Kommandantin Kuki",
         image: "/images/animals/kaninchen-am-futternapf.webp",
         imagePosition: "left center",
         imageZoom: 1.65,
         imageOrigin: "left center",
         alt: "Kaninchen mit schwarzem Rücken und weißer Unterseite links am Futternapf",
-        description: "Kuki hat einen schwarzen Rücken, eine weiße Unterseite und aufrecht stehende Ohren. Sie gehört zu den dominanten Tieren und nimmt eine hohe Position in der Gruppe ein.",
+        description: "Kuki hat einen schwarzen Rücken, eine weiße Unterseite und aufrecht stehende Ohren. Sie nimmt innerhalb der Gruppe eine hohe Position ein und gehört zu den dominanten Tieren.",
     },
     {
         name: "Susi",
-        headline: "Die sanfte, schüchterne Susi",
         image: "/images/animals/schwarzes-kaninchen-auf-stall.webp",
         imagePosition: "center 34%",
         imageZoom: 1,
@@ -209,7 +202,7 @@ export default function AnimalsPage() {
                                 <img src={cat.image} alt={cat.alt} loading="lazy" />
                             </div>
                             <figcaption>
-                                <h3>{cat.headline ?? cat.name}</h3>
+                                <h3>{cat.name}</h3>
                                 {cat.description && <p>{cat.description}</p>}
                             </figcaption>
                         </figure>
@@ -265,7 +258,7 @@ export default function AnimalsPage() {
                                 </div>
                             </div>
                             <figcaption>
-                                <h3>{rabbit.headline}</h3>
+                                <h3>{rabbit.name}</h3>
                                 <p>{rabbit.description}</p>
                             </figcaption>
                         </figure>

@@ -5,7 +5,7 @@ Stand: 22. Oktober 2026. Diese Änderungen liegen im Arbeitsbranch und sind nich
 ## A. Umgesetzte Änderungen
 
 - **Über uns:** Gründung aus einer Aachener Privatinitiative, generationsübergreifende Gründungsgruppe, bewusstes Wachstum, Vereinsgedanke und überprüfte Vorstandsrollen. Die freigegebenen Porträts von Claus M. Wolf und Constantin Kals sind größer, mittig und mit Namen und Funktion darunter eingebunden.
-- **Unsere Schützlinge:** Originalgeschichte der aufgenommenen Katzen und Kaninchen, fünf Katzenprofile mit den vom Verein gewünschten Alliterationen, sechs individuelle Kaninchenprofile mit den vom Verein mitgeteilten Eigenschaften und ein klar als Zukunftsplan beschriebener Eselbereich.
+- **Unsere Schützlinge:** Originalgeschichte der aufgenommenen Katzen und Kaninchen, fünf Katzenprofile und sechs individuelle Kaninchenprofile mit kurzen, persönlicher formulierten Texten sowie ein klar als Zukunftsplan beschriebener Eselbereich.
 - **Der Helenenhof:** Standort, Umzug im Sommer 2027, geplante Einrichtungen, künftige Eselhaltung und spätere Veranstaltungen. Der Hinweis zu Besuchen ist entsprechend der aktuellen Auskunft des Vereins auf „derzeit noch nicht möglich“ geändert.
 - **Unterstützen:** Spendenkonto mit Kopierfunktion, Mitgliedsbeiträge, verlinkte offizielle Beitrittserklärung und individuell vereinbarte Tierpatenschaften.
 - **Kontakt:** Eigene Seite mit Adresse, anklickbarer E-Mail, Besuchshinweis, Hofbild und Karte.
@@ -22,6 +22,7 @@ Maßgebliche Quellen waren die [Startseite](https://sites.google.com/view/helene
 - Der veraltete Hinweis auf Besuche nach Voranmeldung wurde nach der Auskunft des Vereins durch den aktuellen Hinweis ersetzt.
 - Einzelne allgemeinere Passagen erklären die zeitliche Trennung zwischen heutiger Tierhaltung und dem für 2027 angekündigten Umzug.
 - Die sechs Kaninchenbeschreibungen beruhen auf den direkt vom Verein gelieferten Angaben. Alfi wird als schwerhörig beschrieben; eine vollständige Taubheit wird ausdrücklich offen gelassen. Blacky gehört zu den bestimmenden Tieren, Alfi ist noch dominanter, Kuki nimmt eine hohe Position ein und Susi steht am Ende der Rangordnung. Für Hasi und Trixi wurden keine zusätzlichen Charakterzüge erfunden.
+- Die Alliterationen in den Tierprofilen wurden entfernt. Blacky und Hasi werden als neuere Tiere der Gruppe beschrieben; die frühere Herkunftsangabe wurde nicht übernommen.
 
 ## D. Eingesetzte Bilder
 
