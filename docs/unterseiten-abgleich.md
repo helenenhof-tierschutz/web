@@ -12,6 +12,7 @@ Stand: 22. Oktober 2026. Diese Änderungen liegen im Arbeitsbranch und sind nich
 - **Navigation:** Kontakt ist im Kopf- und Fußbereich verlinkt; die Tierprofile führen zur Patenschaftsanfrage. Die Startseite erhielt die korrigierten Hinweise zu Patenschaften und Besuchen. Die Satzung wurde nur für saubere HTML-Struktur und Listenreihenfolge angepasst; der Rechtstext blieb unverändert.
 - **Bildgestaltung:** Die Einstiegsbereiche von „Über uns“, „Unsere Schützlinge“ und „Kontakt“ zeigen Archivfotos. Den leicht nach rechts unten versetzten Kasten erhalten ausschließlich die großen Abschnittsbilder. Die Tierkarten und runden Vorstandsporträts erscheinen ohne Kasten; der Ausschnitt von Constantin Kals ist auf sein Gesicht zentriert.
 - **Startseite:** Die fünf Karten im Bereich „Was wir tun“ verwenden passende Icons aus dem lokalen Helenenhof-Bildarchiv für Unterbringung, Versorgung, Netzwerk, Förderung und Aufklärung. Die ursprünglich schwarzen Icons werden auf der Website per CSS in das Grün der Gestaltung angepasst.
+- **Startseite:** Im unteren Bereich „Helfen Sie mit“ ist das bereitgestellte Tierpatenschaftsbild eingebunden. Auf breiten Bildschirmen steht es zwischen Text und den Möglichkeiten zu helfen; auf dem Smartphone folgt es dem Text.
 
 ## B. Übernommene Originaltexte
 
