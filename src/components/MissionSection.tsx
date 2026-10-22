@@ -1,6 +1,4 @@
 import { css } from "@emotion/css";
-import Card from "./Card";
-import Grid from "./Grid";
 import Section from "./Section";
 import Typography from "./Typography";
 
@@ -12,18 +10,63 @@ const styles = {
         h2 { margin: 0; }
         @media (max-width: 760px) { margin-bottom: 36px; }
     `,
-    card: css`
+    missions: css`
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 54px 36px;
+
+        @media (min-width: 600px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 62px 44px;
+        }
+
+        @media (min-width: 1200px) {
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 66px 44px;
+        }
+    `,
+    mission: css`
+        padding: 0 14px;
+        text-align: center;
+
+        @media (min-width: 600px) {
+            &:last-child {
+                grid-column: 1 / -1;
+                width: min(100%, 420px);
+                justify-self: center;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            grid-column: span 2;
+
+            &:nth-child(4) { grid-column: 2 / span 2; }
+            &:last-child {
+                grid-column: 4 / span 2;
+                width: auto;
+            }
+        }
+
         .mission-icon {
             display: block;
-            width: 54px;
-            height: 54px;
-            margin-bottom: 18px;
+            width: 76px;
+            height: 76px;
+            margin: 0 auto 20px;
             object-fit: contain;
             filter: brightness(0) saturate(100%) invert(19%) sepia(19%) saturate(1388%) hue-rotate(99deg) brightness(92%) contrast(90%);
         }
-        h3 { margin-bottom: 16px; }
-        p { line-height: 1.7; }
+        h3 { margin: 0 auto 16px; }
+        p {
+            max-width: 360px;
+            margin: 0 auto 13px;
+            line-height: 1.75;
+        }
         p:last-child { margin-bottom: 0; }
+
+        @media (max-width: 599px) {
+            padding: 0;
+            .mission-icon { width: 68px; height: 68px; }
+        }
     `,
 };
 
@@ -79,19 +122,17 @@ export default function MissionSection() {
                     Mit Herz und Verstand.{" "}<br /><em>Für jedes Tier.</em>
                 </Typography>
             </div>
-            <Grid container spacing={{ xs: 2, lg: 2.25 }}>
+            <div className={styles.missions}>
                 {missions.map((mission) => (
-                    <Grid size={{ xs: 12, sm: 6, lg: 4 }} key={mission.title}>
-                        <Card as="article" surface="paper" className={styles.card} sx={{ padding: { xs: 24, sm: "27px 23px" } }}>
-                            <img className="mission-icon" src={mission.icon} alt="" />
-                            <Typography variant="h3">{mission.title}</Typography>
-                            {mission.paragraphs.map((paragraph) => (
-                                <Typography variant="body2" color="muted" key={paragraph}>{paragraph}</Typography>
-                            ))}
-                        </Card>
-                    </Grid>
+                    <article className={styles.mission} key={mission.title}>
+                        <img className="mission-icon" src={mission.icon} alt="" />
+                        <Typography variant="h3">{mission.title}</Typography>
+                        {mission.paragraphs.map((paragraph) => (
+                            <Typography variant="body2" color="muted" key={paragraph}>{paragraph}</Typography>
+                        ))}
+                    </article>
                 ))}
-            </Grid>
+            </div>
         </Section>
     );
 }
