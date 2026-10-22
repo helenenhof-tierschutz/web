@@ -167,20 +167,14 @@ export default function SupportPage() {
                             <div className={styles.fees}>
                                 <div className={styles.fee}><strong>24 €</strong><span>regulär pro Jahr</span></div>
                                 <div className={styles.fee}><strong>12 €</strong><span>ermäßigt pro Jahr</span></div>
-                                <div className={styles.fee}><strong>40 €</strong><span>Familien pro Jahr*</span></div>
-                                <div className={styles.fee}><strong>180 €</strong><span>juristische Personen pro Jahr*</span></div>
+                                <div className={styles.fee}><strong>40 €</strong><span>Familien pro Jahr</span></div>
+                                <div className={styles.fee}><strong>180 €</strong><span>juristische Personen pro Jahr</span></div>
                             </div>
                             <p className={styles.note}>
                                 Laut Beitrittserklärung gilt die Ermäßigung für Schüler,
                                 Auszubildende, Studierende, Senioren, Arbeitslose und
                                 Menschen mit Schwerbehinderung ab GdB 50. Ein formloser
                                 Nachweis genügt.
-                            </p>
-                            <p className={styles.note}>
-                                * Die Beiträge für Familien und juristische Personen
-                                stehen auf der ursprünglichen Vereinsseite, aber nicht
-                                in der vorhandenen Beitrittserklärung. Bitte fragen Sie
-                                für diese Mitgliedschaften direkt beim Verein nach.
                             </p>
                         </div>
                     </Grid>

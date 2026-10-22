@@ -22,26 +22,17 @@ const styles = {
         h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.3; }
         p { margin: 0; color: var(--color-text-light); font-size: 0.9rem; line-height: 1.6; }
     `,
-    portraitFrame: css`
-        position: relative;
-        padding: 0 12px 12px 0;
-        margin-bottom: 20px;
-        &::before {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: 78%;
-            height: 70%;
-            background: var(--color-cream);
-            content: "";
-        }
-    `,
-    portrait: css`
-        position: relative;
-        display: block;
+    portraitCrop: css`
         width: 128px;
         height: 128px;
+        margin-bottom: 20px;
+        overflow: hidden;
         border-radius: 50%;
+    `,
+    portrait: css`
+        display: block;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         object-position: center 30%;
     `,
@@ -61,6 +52,8 @@ const vorstandMembers = [
         name: "Constantin Kals",
         role: "Schatzmeister",
         image: "/images/team/constantin-kals.webp",
+        imageScale: 1.25,
+        imageTransformOrigin: "left 30%",
     },
 ];
 
@@ -87,8 +80,17 @@ export default function VorstandSection() {
                     >
                         <div className={styles.memberInfo}>
                             {member.image && (
-                                <div className={styles.portraitFrame}>
-                                    <img className={styles.portrait} src={member.image} alt={member.name} loading="lazy" />
+                                <div className={styles.portraitCrop}>
+                                    <img
+                                        className={styles.portrait}
+                                        src={member.image}
+                                        alt={member.name}
+                                        loading="lazy"
+                                        style={member.imageScale ? {
+                                            transform: `scale(${member.imageScale})`,
+                                            transformOrigin: member.imageTransformOrigin,
+                                        } : undefined}
+                                    />
                                 </div>
                             )}
                             <Typography variant="h3">{member.name}</Typography>

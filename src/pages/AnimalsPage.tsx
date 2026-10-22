@@ -25,20 +25,6 @@ const styles = {
         h3 { margin: 0; color: var(--color-main); font-family: var(--font-serif); font-size: 1.35rem; font-weight: 500; line-height: 1.35; }
         p { margin: 10px 0 0; color: var(--color-text-light); font-size: 0.9rem; line-height: 1.7; }
     `,
-    photoFrame: css`
-        position: relative;
-        padding: 0 12px 12px 0;
-        &::before {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: 78%;
-            height: 70%;
-            background: var(--color-cream-dark);
-            content: "";
-        }
-        & > img, & > div { position: relative; z-index: 1; }
-    `,
     rabbitPhoto: css`
         width: 100%;
         aspect-ratio: 4 / 3;
@@ -89,7 +75,7 @@ const rabbits = [
         imageZoom: 1.65,
         imageOrigin: "right center",
         alt: "Schwarzes Schlappohrkaninchen rechts auf einer Wiese",
-        description: "Blacky gehört zu den neueren Tieren unserer Kaninchengruppe. Der schwarze Schlappohr-Rammler zählt zu den bestimmenden Tieren – auch wenn Alfi noch entschiedener auftritt.",
+        description: "Blacky gehört zu den neueren Tieren unserer Kaninchengruppe. Der schwarze Schlappohr-Rammler nimmt in der Rangordnung einen klaren Platz ein – nur Alfi steht noch vor ihm.",
     },
     {
         name: "Alfi",
@@ -98,7 +84,7 @@ const rabbits = [
         imageZoom: 1.65,
         imageOrigin: "left center",
         alt: "Weißes Schlappohrkaninchen links auf einer Wiese",
-        description: "Alfi ist der weiße Schlappohr-Rammler der Gruppe und tritt besonders bestimmt auf. Er steht noch über Blacky in der Rangordnung. Alfi hört nur eingeschränkt; ob er vollständig taub ist, wissen wir nicht sicher.",
+        description: "Alfi ist der weiße Schlappohr-Rammler der Gruppe und steht an ihrer Spitze. Er ist noch dominanter als Blacky. Alfi hört nur eingeschränkt; ob er vollständig taub ist, lässt sich nicht sicher sagen.",
     },
     {
         name: "Hasi",
@@ -107,7 +93,7 @@ const rabbits = [
         imageZoom: 1,
         imageOrigin: "center center",
         alt: "Braunes Schlappohrkaninchen mit dunklen Fellpartien vor einem Stall",
-        description: "Hasi gehört zu den neueren Tieren unserer Kaninchengruppe. Ihr braunes Fell hat schwarze Partien, und ihre Schlappohren geben ihr ein ganz eigenes Aussehen.",
+        description: "Hasi zählt zu den neueren Tieren unserer Kaninchengruppe. Mit ihren Schlappohren sowie dem braunen Fell mit schwarzen Partien ist sie gut wiederzuerkennen.",
     },
     {
         name: "Trixi",
@@ -116,7 +102,7 @@ const rabbits = [
         imageZoom: 1.65,
         imageOrigin: "right center",
         alt: "Schwarzes Kaninchen mit aufrechten Ohren rechts am Futternapf",
-        description: "Trixi ist mit deutlichem Abstand das älteste Kaninchen unserer Gruppe. Mit ihrem schwarzen Fell und den aufrecht stehenden Ohren ist sie ein vertrauter Teil des Geheges.",
+        description: "Trixi ist mit deutlichem Abstand das älteste Kaninchen unserer Gruppe. Ihr schwarzes Fell und die aufrecht stehenden Ohren machen sie in der Gruppe unverwechselbar.",
     },
     {
         name: "Kuki",
@@ -125,7 +111,7 @@ const rabbits = [
         imageZoom: 1.65,
         imageOrigin: "left center",
         alt: "Kaninchen mit schwarzem Rücken und weißer Unterseite links am Futternapf",
-        description: "Kuki hat einen schwarzen Rücken, eine weiße Unterseite und aufrecht stehende Ohren. Sie nimmt innerhalb der Gruppe eine hohe Position ein und gehört zu den dominanten Tieren.",
+        description: "Kuki trägt einen schwarzen Rücken und eine weiße Unterseite. Mit ihren aufrecht stehenden Ohren ist sie gut zu erkennen. In der Gruppe nimmt sie eine hohe Position ein.",
     },
     {
         name: "Susi",
@@ -134,7 +120,7 @@ const rabbits = [
         imageZoom: 1,
         imageOrigin: "center center",
         alt: "Kleines schwarzes Kaninchen mit weißen Stellen und aufrechten Ohren auf einem Stalldach",
-        description: "Susi ist sehr klein, überwiegend schwarz und hat ein paar weiße Fellstellen sowie aufrecht stehende Ohren. In der Rangordnung der Gruppe steht sie ganz unten.",
+        description: "Susi ist das kleinste Kaninchen der Gruppe. Ihr Fell ist überwiegend schwarz und hat ein paar helle Stellen; die Ohren stehen aufrecht. In der Rangordnung steht sie ganz unten.",
     },
 ];
 
@@ -198,9 +184,7 @@ export default function AnimalsPage() {
                 <div className={styles.gallery}>
                     {cats.map((cat) => (
                         <figure className={styles.animal} key={cat.name}>
-                            <div className={styles.photoFrame}>
-                                <img src={cat.image} alt={cat.alt} loading="lazy" />
-                            </div>
+                            <img src={cat.image} alt={cat.alt} loading="lazy" />
                             <figcaption>
                                 <h3>{cat.name}</h3>
                                 {cat.description && <p>{cat.description}</p>}
@@ -243,19 +227,17 @@ export default function AnimalsPage() {
                 <div className={styles.gallery}>
                     {rabbits.map((rabbit) => (
                         <figure className={styles.animal} key={rabbit.name}>
-                            <div className={styles.photoFrame}>
-                                <div className={styles.rabbitPhoto}>
-                                    <img
-                                        src={rabbit.image}
-                                        alt={rabbit.alt}
-                                        loading="lazy"
-                                        style={{
-                                            objectPosition: rabbit.imagePosition,
-                                            transform: `scale(${rabbit.imageZoom})`,
-                                            transformOrigin: rabbit.imageOrigin,
-                                        }}
-                                    />
-                                </div>
+                            <div className={styles.rabbitPhoto}>
+                                <img
+                                    src={rabbit.image}
+                                    alt={rabbit.alt}
+                                    loading="lazy"
+                                    style={{
+                                        objectPosition: rabbit.imagePosition,
+                                        transform: `scale(${rabbit.imageZoom})`,
+                                        transformOrigin: rabbit.imageOrigin,
+                                    }}
+                                />
                             </div>
                             <figcaption>
                                 <h3>{rabbit.name}</h3>
