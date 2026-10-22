@@ -100,6 +100,7 @@ const missions = [
         icon: "/images/icons/spenden-herz-und-geldbeutel.png",
         paragraphs: [
             "Über Unterstützung für die Tiere freuen wir uns. Tierpatenschaften und andere finanzielle Fördermöglichkeiten machen die Versorgung planbar und dauerhaft möglich.",
+            "Sie helfen uns dabei, die Kosten für gutes Futter, Pflege und notwendige tierärztliche Behandlungen zu tragen. So können wir unseren Schützlingen langfristig ein sicheres, artgerechtes Zuhause bieten und künftig weiteren hilfsbedürftigen Tieren helfen.",
         ],
     },
     {
