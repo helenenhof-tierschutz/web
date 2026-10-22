@@ -33,7 +33,7 @@ export default function Image({
             bottom: 0;
             width: 78%;
             height: 70%;
-            background: var(--color-cream-dark);
+            background: var(--color-border-muted);
             content: "";
         }
         & > img {

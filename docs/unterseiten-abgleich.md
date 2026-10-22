@@ -4,12 +4,13 @@ Stand: 22. Oktober 2026. Diese Änderungen liegen im Arbeitsbranch und sind nich
 
 ## A. Umgesetzte Änderungen
 
-- **Über uns:** Gründung aus einer Aachener Privatinitiative, generationsübergreifende Gründungsgruppe, bewusstes Wachstum, Vereinsgedanke und überprüfte Vorstandsrollen. Das freigegebene Porträt von Constantin Kals ist eingebunden.
+- **Über uns:** Gründung aus einer Aachener Privatinitiative, generationsübergreifende Gründungsgruppe, bewusstes Wachstum, Vereinsgedanke und überprüfte Vorstandsrollen. Die freigegebenen Porträts von Claus M. Wolf und Constantin Kals sind größer, mittig und mit Namen und Funktion darunter eingebunden.
 - **Unsere Schützlinge:** Originalgeschichte der aufgenommenen Katzen und Kaninchen, fünf Katzenprofile mit den vom Verein gewünschten Alliterationen, sechs individuelle Kaninchenprofile mit den vom Verein mitgeteilten Eigenschaften und ein klar als Zukunftsplan beschriebener Eselbereich.
 - **Der Helenenhof:** Standort, Umzug im Sommer 2027, geplante Einrichtungen, künftige Eselhaltung und spätere Veranstaltungen. Der Hinweis zu Besuchen ist entsprechend der aktuellen Auskunft des Vereins auf „derzeit noch nicht möglich“ geändert.
 - **Unterstützen:** Spendenkonto mit Kopierfunktion, Mitgliedsbeiträge, verlinkte offizielle Beitrittserklärung und individuell vereinbarte Tierpatenschaften.
-- **Kontakt:** Eigene schlichte Seite mit Adresse, anklickbarer E-Mail und Besuchshinweis.
+- **Kontakt:** Eigene Seite mit Adresse, anklickbarer E-Mail, Besuchshinweis, Hofbild und Karte.
 - **Navigation:** Kontakt ist im Kopf- und Fußbereich verlinkt; die Tierprofile führen zur Patenschaftsanfrage. Die Startseite erhielt die korrigierten Hinweise zu Patenschaften und Besuchen. Die Satzung wurde nur für saubere HTML-Struktur und Listenreihenfolge angepasst; der Rechtstext blieb unverändert.
+- **Bildgestaltung:** Die Einstiegsbereiche von „Über uns“, „Unsere Schützlinge“ und „Kontakt“ zeigen Archivfotos. Inhaltsfotos, Tierkarten und Teamfotos erhalten den einheitlichen, leicht nach rechts unten versetzten Kasten; auf beigem Hintergrund bleibt er sichtbar.
 
 ## B. Übernommene Originaltexte
 
@@ -38,7 +39,7 @@ Alle Tierbilder stammen aus dem vom Verein freigegebenen lokalen Helenenhof-Bild
 | Kuki | schwarzes Kaninchen mit heller Unterseite links am Futternapf | Fellmuster und Ohren; Identität unbestätigt |
 | Susi | kleines schwarzes Kaninchen mit hellen Stellen auf dem Stalldach | Größe, Fell und Ohren; Identität unbestätigt |
 
-Hof- und Naturseiten verwenden weitere Bilder aus den entsprechenden Archivordnern. Allgemeine Landschaftsbilder werden nicht als konkrete Hofansicht bezeichnet.
+Hof- und Naturseiten verwenden weitere Bilder aus den entsprechenden Archivordnern. Allgemeine Landschaftsbilder werden nicht als konkrete Hofansicht bezeichnet. Das von Claus M. Wolf bereitgestellte Porträt ist ebenfalls eingebunden.
 
 ## E. Noch offene Fragen vor Veröffentlichung
 

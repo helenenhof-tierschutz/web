@@ -32,6 +32,20 @@ const styles = {
             grid-template-rows: repeat(2, minmax(0, 130px));
         }
     `,
+    galleryFrame: css`
+        position: relative;
+        padding: 0 35px 35px 0;
+        &::before {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 78%;
+            height: 70%;
+            background: var(--color-border-muted);
+            content: "";
+        }
+        & > div { position: relative; z-index: 1; }
+    `,
 };
 
 export default function AnimalsSection() {
@@ -39,10 +53,12 @@ export default function AnimalsSection() {
         <Section surface="soft" id="unsere-schuetzlinge">
             <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                 <Grid size={{ xs: 12, md: 6 }}>
-                    <div className={styles.gallery}>
-                        <img src="/images/home/kaninchen-auf-wiese.webp" alt="Drei Kaninchen sitzen zusammen auf einer grünen Wiese" loading="lazy" />
-                        <img src="/images/home/graue-katze.webp" alt="Grau getigerte Katze sitzt vor einem Gehege" loading="lazy" />
-                        <img src="/images/home/orange-weisse-katze.webp" alt="Orange-weiße Katze sitzt im Gras vor violetten Blüten" loading="lazy" />
+                    <div className={styles.galleryFrame}>
+                        <div className={styles.gallery}>
+                            <img src="/images/home/kaninchen-auf-wiese.webp" alt="Drei Kaninchen sitzen zusammen auf einer grünen Wiese" loading="lazy" />
+                            <img src="/images/home/graue-katze.webp" alt="Grau getigerte Katze sitzt vor einem Gehege" loading="lazy" />
+                            <img src="/images/home/orange-weisse-katze.webp" alt="Orange-weiße Katze sitzt im Gras vor violetten Blüten" loading="lazy" />
+                        </div>
                     </div>
                 </Grid>
                 <Grid size={{ xs: 12, md: 6 }}>

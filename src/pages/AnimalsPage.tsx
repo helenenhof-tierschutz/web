@@ -1,6 +1,7 @@
 import { css } from "@emotion/css";
 import Button from "../components/Button";
 import Grid from "../components/Grid";
+import Image from "../components/Image";
 import Section from "../components/Section";
 import Typography from "../components/Typography";
 import Page from "./Page";
@@ -20,9 +21,23 @@ const styles = {
         margin: 0;
         background: var(--color-cream);
         img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-        figcaption { padding: 18px 20px 22px; }
+        figcaption { padding: 12px 20px 22px; }
         h3 { margin: 0; color: var(--color-main); font-family: var(--font-serif); font-size: 1.35rem; font-weight: 500; line-height: 1.35; }
         p { margin: 10px 0 0; color: var(--color-text-light); font-size: 0.9rem; line-height: 1.7; }
+    `,
+    photoFrame: css`
+        position: relative;
+        padding: 0 12px 12px 0;
+        &::before {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 78%;
+            height: 70%;
+            background: var(--color-cream-dark);
+            content: "";
+        }
+        & > img, & > div { position: relative; z-index: 1; }
     `,
     rabbitPhoto: css`
         width: 100%;
@@ -134,25 +149,38 @@ export default function AnimalsPage() {
     return (
         <Page>
             <Section surface="soft">
-                <div className={styles.intro}>
-                    <Typography variant="eyebrow">Unsere Schützlinge</Typography>
-                    <Typography variant="h1" size="display">
-                        Jedes Tier hat eine Geschichte.<br />
-                        <em>Und verdient ein gutes Leben.</em>
-                    </Typography>
-                    <Typography component="p" variant="subtitle1" color="main">
-                        Wir sind ein kleiner Verein, dem das Wohl der Tiere am Herzen liegt.
-                    </Typography>
-                    <Typography variant="body1">
-                        Zurzeit beherbergen wir Kaninchen und Katzen, die vorrangig durch
-                        private Vermittlung zu uns gekommen sind, weil sie dringend ein
-                        gutes, artgerechtes Zuhause benötigt haben. Darunter klapperdürre
-                        Kätzchen aus einem Animal-Hoarding-Messiehaus, ein auf einer
-                        Müllhalde ausgesetztes Mutter-Tochter-Katzen-Duo und Kaninchen,
-                        eingepfercht auf ihren Exkrementen in einem Drahtverhau,
-                        ausgemergelt und jahrelang isoliert.
-                    </Typography>
-                </div>
+                <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
+                    <Grid size={{ xs: 12, md: 7 }}>
+                        <div className={styles.intro}>
+                            <Typography variant="eyebrow">Unsere Schützlinge</Typography>
+                            <Typography variant="h1" size="display">
+                                Jedes Tier hat eine Geschichte.<br />
+                                <em>Und verdient ein gutes Leben.</em>
+                            </Typography>
+                            <Typography component="p" variant="subtitle1" color="main">
+                                Wir sind ein kleiner Verein, dem das Wohl der Tiere am Herzen liegt.
+                            </Typography>
+                            <Typography variant="body1">
+                                Zurzeit beherbergen wir Kaninchen und Katzen, die vorrangig durch
+                                private Vermittlung zu uns gekommen sind, weil sie dringend ein
+                                gutes, artgerechtes Zuhause benötigt haben. Darunter klapperdürre
+                                Kätzchen aus einem Animal-Hoarding-Messiehaus, ein auf einer
+                                Müllhalde ausgesetztes Mutter-Tochter-Katzen-Duo und Kaninchen,
+                                eingepfercht auf ihren Exkrementen in einem Drahtverhau,
+                                ausgemergelt und jahrelang isoliert.
+                            </Typography>
+                        </div>
+                    </Grid>
+                    <Grid size={{ xs: 12, md: 5 }}>
+                        <Image
+                            src="/images/home/kaninchen-auf-wiese.webp"
+                            alt="Drei Kaninchen gemeinsam auf einer Wiese"
+                            loading="eager"
+                            displayHeight="380px"
+                            mobileHeight="290px"
+                        />
+                    </Grid>
+                </Grid>
             </Section>
 
             <Section surface="none" id="katzen">
@@ -177,7 +205,9 @@ export default function AnimalsPage() {
                 <div className={styles.gallery}>
                     {cats.map((cat) => (
                         <figure className={styles.animal} key={cat.name}>
-                            <img src={cat.image} alt={cat.alt} loading="lazy" />
+                            <div className={styles.photoFrame}>
+                                <img src={cat.image} alt={cat.alt} loading="lazy" />
+                            </div>
                             <figcaption>
                                 <h3>{cat.headline ?? cat.name}</h3>
                                 {cat.description && <p>{cat.description}</p>}
@@ -220,17 +250,19 @@ export default function AnimalsPage() {
                 <div className={styles.gallery}>
                     {rabbits.map((rabbit) => (
                         <figure className={styles.animal} key={rabbit.name}>
-                            <div className={styles.rabbitPhoto}>
-                                <img
-                                    src={rabbit.image}
-                                    alt={rabbit.alt}
-                                    loading="lazy"
-                                    style={{
-                                        objectPosition: rabbit.imagePosition,
-                                        transform: `scale(${rabbit.imageZoom})`,
-                                        transformOrigin: rabbit.imageOrigin,
-                                    }}
-                                />
+                            <div className={styles.photoFrame}>
+                                <div className={styles.rabbitPhoto}>
+                                    <img
+                                        src={rabbit.image}
+                                        alt={rabbit.alt}
+                                        loading="lazy"
+                                        style={{
+                                            objectPosition: rabbit.imagePosition,
+                                            transform: `scale(${rabbit.imageZoom})`,
+                                            transformOrigin: rabbit.imageOrigin,
+                                        }}
+                                    />
+                                </div>
                             </div>
                             <figcaption>
                                 <h3>{rabbit.headline}</h3>

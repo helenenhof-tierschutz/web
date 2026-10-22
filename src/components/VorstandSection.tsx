@@ -11,20 +11,39 @@ const styles = {
         @media (max-width: 640px) { margin-bottom: 30px; }
     `,
     memberInfo: css`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
         height: 100%;
         padding: clamp(24px, 3vw, 36px);
         background: var(--color-cream-dark);
+        text-align: center;
         h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.3; }
         p { margin: 0; color: var(--color-text-light); font-size: 0.9rem; line-height: 1.6; }
     `,
+    portraitFrame: css`
+        position: relative;
+        padding: 0 12px 12px 0;
+        margin-bottom: 20px;
+        &::before {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 78%;
+            height: 70%;
+            background: var(--color-cream);
+            content: "";
+        }
+    `,
     portrait: css`
+        position: relative;
         display: block;
-        width: 82px;
-        height: 82px;
-        margin-bottom: 18px;
+        width: 128px;
+        height: 128px;
         border-radius: 50%;
         object-fit: cover;
-        object-position: center 28%;
+        object-position: center 30%;
     `,
 };
 
@@ -36,6 +55,7 @@ const vorstandMembers = [
     {
         name: "Claus M. Wolf",
         role: "Stellvertretender Vorsitzender",
+        image: "/images/team/claus-michael-wolf.jpg",
     },
     {
         name: "Constantin Kals",
@@ -66,7 +86,11 @@ export default function VorstandSection() {
                         key={member.name}
                     >
                         <div className={styles.memberInfo}>
-                            {member.image && <img className={styles.portrait} src={member.image} alt={member.name} loading="lazy" />}
+                            {member.image && (
+                                <div className={styles.portraitFrame}>
+                                    <img className={styles.portrait} src={member.image} alt={member.name} loading="lazy" />
+                                </div>
+                            )}
                             <Typography variant="h3">{member.name}</Typography>
                             <Typography variant="body1">{member.role}</Typography>
                         </div>

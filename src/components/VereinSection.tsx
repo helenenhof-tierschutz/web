@@ -1,5 +1,6 @@
 import { css } from "@emotion/css";
 import Grid from "./Grid";
+import Image from "./Image";
 import Section from "./Section";
 import Typography from "./Typography";
 
@@ -13,15 +14,13 @@ const styles = {
 export default function VereinSection() {
     return (
         <Section surface="soft">
-            <Grid container spacing={{ xs: 2, md: 6 }}>
-                <Grid size={{ xs: 12, md: 5 }}>
+            <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
+                <Grid size={{ xs: 12, md: 6 }}>
                     <Typography variant="eyebrow">Unsere Geschichte</Typography>
                     <Typography variant="h1" size="display">
                         Aus einer privaten Initiative.<br />
                         <em>Ein gemeinsames Anliegen.</em>
                     </Typography>
-                </Grid>
-                <Grid size={{ xs: 12, md: 7 }}>
                     <div className={styles.text}>
                         <Typography component="p" variant="subtitle1" color="main">
                             Ursprünglich war das eine Aachener Privatinitiative, die wir
@@ -41,6 +40,15 @@ export default function VereinSection() {
                             lenken, denen oft übel mitgespielt wird.
                         </Typography>
                     </div>
+                </Grid>
+                <Grid size={{ xs: 12, md: 6 }}>
+                    <Image
+                        src="/images/home/kaninchen-beim-fressen.webp"
+                        alt="Kaninchen fressen gemeinsam Gemüse im Außengehege"
+                        loading="eager"
+                        displayHeight="430px"
+                        mobileHeight="300px"
+                    />
                 </Grid>
             </Grid>
         </Section>
