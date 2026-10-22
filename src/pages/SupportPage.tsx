@@ -78,38 +78,12 @@ export default function SupportPage() {
             <PageBanner
                 src="/images/banners/wiese-mit-herbstlichem-wald.jpg"
                 alt="Wiese vor einem herbstlichen Wald"
+                eyebrow="Helfen Sie mit"
+                title={<><span>Gemeinsam helfen.</span><br /><em>Mit Ihrer Unterstützung.</em></>}
+                lead="Über Unterstützung für die Tiere freuen wir uns."
+                action={{ href: "#spenden", label: "Möglichkeiten ansehen" }}
                 objectPosition="center 53%"
             />
-            <Section surface="soft">
-                <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
-                    <Grid size={{ xs: 12, md: 7 }}>
-                        <div className={styles.copy}>
-                            <Typography variant="eyebrow">Helfen Sie mit</Typography>
-                            <Typography variant="h1" size="display">
-                                Gemeinsam helfen.<br />
-                                <em>Mit Ihrer Unterstützung.</em>
-                            </Typography>
-                            <Typography component="p" variant="subtitle1" color="main">
-                                Über Unterstützung für die Tiere freuen wir uns.
-                            </Typography>
-                            <Typography variant="body1" color="muted">
-                                Tierpatenschaften und andere finanzielle Fördermöglichkeiten
-                                machen die Versorgung planbar und dauerhaft möglich.
-                            </Typography>
-                            <Button href="#spenden">Möglichkeiten ansehen</Button>
-                        </div>
-                    </Grid>
-                    <Grid size={{ xs: 12, md: 5 }}>
-                        <Image
-                            src="/images/home/kaninchen-vor-stall.webp"
-                            alt="Braunes Schlappohrkaninchen vor einem Holzstall"
-                            loading="eager"
-                            displayHeight="430px"
-                        />
-                    </Grid>
-                </Grid>
-            </Section>
-
             <Section surface="strong" id="spenden">
                 <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                     <Grid size={{ xs: 12, md: 6 }}>

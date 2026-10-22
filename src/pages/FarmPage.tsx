@@ -21,21 +21,15 @@ export default function FarmPage() {
             <PageBanner
                 src="/images/banners/waldweg-im-gruenen.jpg"
                 alt="Waldweg im Grünen"
+                eyebrow="Unser Hof"
+                title={<><span>Ein Ort zum Ankommen.</span><br /><em>Und zum Bleiben.</em></>}
+                lead="Der Hof liegt im schönen Dorf Steckenborn auf den Höhen über dem Rursee in der Nordeifel."
                 objectPosition="center 54%"
             />
             <Section surface="none">
                 <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                     <Grid size={{ xs: 12, md: 6 }}>
                         <div className={styles.copy}>
-                            <Typography variant="eyebrow">Unser Hof</Typography>
-                            <Typography variant="h1" size="display">
-                                Ein Ort zum Ankommen.<br />
-                                <em>Und zum Bleiben.</em>
-                            </Typography>
-                            <Typography component="p" variant="subtitle1" color="main">
-                                Der Hof liegt im schönen Dorf Steckenborn auf den Höhen
-                                über dem Rursee in der Nordeifel.
-                            </Typography>
                             <Typography variant="body1">
                                 Dort, wo die Welt noch ein wenig heiler ist. Im Sommer 2027
                                 werden alle Tiere auf den Helenenhof in

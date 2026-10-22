@@ -16,16 +16,7 @@ export default function VereinSection() {
         <Section surface="soft">
             <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                 <Grid size={{ xs: 12, md: 6 }}>
-                    <Typography variant="eyebrow">Unsere Geschichte</Typography>
-                    <Typography variant="h1" size="display">
-                        Aus einer privaten Initiative.<br />
-                        <em>Ein gemeinsames Anliegen.</em>
-                    </Typography>
                     <div className={styles.text}>
-                        <Typography component="p" variant="subtitle1" color="main">
-                            Ursprünglich war das eine Aachener Privatinitiative, die wir
-                            nun auf eine breitere Basis gestellt haben.
-                        </Typography>
                         <Typography variant="body1" color="muted">
                             So haben wir in einer generationsübergreifenden
                             Gründungsgruppe – der Jüngste 18 Jahre, die Älteste 74 Jahre –
