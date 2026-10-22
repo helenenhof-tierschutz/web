@@ -32,6 +32,7 @@ const styles = {
         font-size: 3rem;
         line-height: 1.12;
         @media (max-width: 760px) { font-size: 2.25rem; }
+        @media (max-width: 360px) { font-size: 1.9rem; }
     `,
     displayH3: css`font-size: 2rem; line-height: 1.2;`,
     h3: css`font-size: 1.25rem; line-height: 1.3;`,

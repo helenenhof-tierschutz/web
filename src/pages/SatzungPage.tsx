@@ -27,7 +27,7 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 1 Name und Sitz
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     <ol>
                         <li value="1">Der Verein führt den Namen „Helenenhof – Tierschutzverein Nordeifel“.</li>
                         <li value="2">Er soll in das Vereinsregister eingetragen werden und führt nach der Eintragung den Zusatz „e.V.“.</li>
@@ -37,13 +37,13 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 2 Geschäftsjahr
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     Das Geschäftsjahr ist das Kalenderjahr.
                 </Typography>
                 <Typography variant="h2">
                     § 3 Zweck des Vereins, Gemeinnützigkeit
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     <ol>
                         <li value="1">Zweck des Vereins ist die Förderung des Tierschutzes.</li>
                         <li value="2">Der Verein verfolgt ausschließlich und unmittelbar gemeinnützige Zwecke im Sinne des Abschnitts „Steuerbegünstigte Zwecke“ der Abgabenordnung.</li>
@@ -62,25 +62,25 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 4 Selbstlosigkeit
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     Der Verein ist selbstlos tätig; er verfolgt nicht in erster Linie eigenwirtschaftliche Zwecke.
                 </Typography>
                 <Typography variant="h2">
                     § 5 Mittelverwendung
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     Mittel des Vereins dürfen nur für die satzungsmäßigen Zwecke verwendet werden. Die Mitglieder erhalten keine Zuwendungen aus Mitteln des Vereins.
                 </Typography>
                 <Typography variant="h2">
                     § 6 Verbot von Vergünstigungen
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     Es darf keine Person durch Ausgaben, die dem Zweck des Vereins fremd sind, oder durch unverhältnismäßig hohe Vergütungen begünstigt werden.
                 </Typography>
                 <Typography variant="h2">
                     § 7 Erwerb der Mitgliedschaft
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     <ol>
                         <li value="1">Vereinsmitglieder können natürliche oder juristische Personen werden.</li>
                         <li value="2">Der Aufnahmeantrag ist in Textform zu stellen.</li>
@@ -92,7 +92,7 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 8 Beendigung der Mitgliedschaft
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     <ol>
                         <li value="1">Die Mitgliedschaft endet durch Austritt, Ausschluss, Tod oder Auflösung der juristischen Person.</li>
                         <li value="2">Der Austritt erfolgt durch Erklärung in Textform gegenüber einem vertretungsberechtigten Vorstandsmitglied. Die Austrittserklärung in Textform muss mit einer Frist von einem Monat jeweils zum Ende des Geschäftsjahres gegenüber dem Vorstand erklärt werden.</li>
@@ -103,7 +103,7 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 9 Beiträge
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     <ol>
                         <li value="1">Von den Mitgliedern werden Jahresbeiträge erhoben.</li>
                         <li value="2">Art, Höhe und Fälligkeit der Beiträge bestimmt die Mitgliederversammlung in einer Beitragsordnung.</li>
@@ -113,7 +113,7 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 10 Organe des Vereins
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     Organe des Vereins sind:
                     <ul>
                         <li>die Mitgliederversammlung,</li>
@@ -124,7 +124,7 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 11 Mitgliederversammlung
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     <ol>
                         <li value="1">Die Mitgliederversammlung ist das oberste Vereinsorgan.</li>
                         <li value="2">Sie ist insbesondere zuständig für:
@@ -156,7 +156,7 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 12 Vorstand
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     <ol>
                         <li value="1">Der Vorstand im Sinne des § 26 BGB besteht aus:
                             <ul>
@@ -173,16 +173,16 @@ export default function SatzungPage() {
                         <li value="7">Bei Beendigung der Mitgliedschaft im Verein endet auch das Amt als Vorstandsmitglied.</li>
                         <li value="8">Vorstandssitzungen werden von der oder dem Vorsitzenden, bei Verhinderung von der oder dem stellvertretenden Vorsitzenden, einberufen. Die Einberufung soll in Textform unter Einhaltung einer Frist von mindestens einer Woche erfolgen. In dringenden Fällen kann die Frist angemessen verkürzt werden.</li>
                         <li value="9">Der Vorstand ist beschlussfähig, wenn mindestens zwei seiner drei Mitglieder an der Vorstandssitzung teilnehmen.</li>
-                        <li value="1"> Der Vorstand fasst seine Beschlüsse mit einfacher Mehrheit der abgegebenen gültigen Stimmen. Jedes Vorstandsmitglied hat eine Stimme. Bei Stimmengleichheit gilt ein Antrag als abgelehnt.</li>
-                        <li value="1"> Die Sitzungen des Vorstands werden von der oder dem Vorsitzenden, bei Verhinderung von der oder dem stellvertretenden Vorsitzenden, geleitet.</li>
-                        <li value="1"> Über jede Vorstandssitzung ist ein Protokoll anzufertigen, das mindestens Ort und Zeit der Sitzung, die Namen der teilnehmenden Vorstandsmitglieder, die gefassten Beschlüsse und die Abstimmungsergebnisse enthält. Das Protokoll ist von der Sitzungsleitung und der protokollführenden Person zu unterzeichnen.</li>
-                        <li value="1"> Ein Vorstandsbeschluss kann auch außerhalb einer Sitzung in Textform gefasst werden, wenn alle Vorstandsmitglieder an der Beschlussfassung beteiligt werden und kein Vorstandsmitglied diesem Verfahren widerspricht.</li>
+                        <li value="10">Der Vorstand fasst seine Beschlüsse mit einfacher Mehrheit der abgegebenen gültigen Stimmen. Jedes Vorstandsmitglied hat eine Stimme. Bei Stimmengleichheit gilt ein Antrag als abgelehnt.</li>
+                        <li value="11">Die Sitzungen des Vorstands werden von der oder dem Vorsitzenden, bei Verhinderung von der oder dem stellvertretenden Vorsitzenden, geleitet.</li>
+                        <li value="12">Über jede Vorstandssitzung ist ein Protokoll anzufertigen, das mindestens Ort und Zeit der Sitzung, die Namen der teilnehmenden Vorstandsmitglieder, die gefassten Beschlüsse und die Abstimmungsergebnisse enthält. Das Protokoll ist von der Sitzungsleitung und der protokollführenden Person zu unterzeichnen.</li>
+                        <li value="13">Ein Vorstandsbeschluss kann auch außerhalb einer Sitzung in Textform gefasst werden, wenn alle Vorstandsmitglieder an der Beschlussfassung beteiligt werden und kein Vorstandsmitglied diesem Verfahren widerspricht.</li>
                     </ol>
                 </Typography>
                 <Typography variant="h2">
                     § 13 Aufgaben des Vorstands
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     Der Vorstand führt die laufenden Geschäfte des Vereins. Zu seinen Aufgaben gehören insbesondere:
                     <ul>
                         <li>Umsetzung des Vereinszwecks,</li>
@@ -197,7 +197,7 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 14 Kassenprüfung
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     <ol>
                         <li value="1">Die Mitgliederversammlung wählt für die Dauer von zwei Jahren zwei Kassenprüfer.</li>
                         <li value="2">Die Kassenprüfer dürfen nicht dem Vorstand angehören.</li>
@@ -208,7 +208,7 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 15 Spenden
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     <ol>
                         <li value="1">Der Verein ist berechtigt, Spenden, Zuwendungen und sonstige Unterstützungsleistungen entgegenzunehmen.</li>
                         <li value="2">Spenden, die für einen bestimmten Zweck gegeben werden, sind nach Möglichkeit entsprechend dieser Zweckbestimmung zu verwenden.</li>
@@ -218,7 +218,7 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 16 Ehrenamtlichkeit und Vergütungen
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     <ol>
                         <li value="1">Die Vereinsämter werden grundsätzlich ehrenamtlich ausgeübt.</li>
                         <li value="2">Die Mitgliederversammlung kann abweichend hiervon beschließen, dass für bestimmte Tätigkeiten im Rahmen der gesetzlichen Möglichkeiten angemessene Vergütungen oder Aufwandsentschädigungen gezahlt werden, soweit dies mit Gemeinnützigkeitsrecht und Haushaltslage vereinbar ist.</li>
@@ -228,7 +228,7 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 17 Datenschutz
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     <ol>
                         <li value="1">Der Verein verarbeitet personenbezogene Daten seiner Mitglieder und Unterstützer nur, soweit dies zur Erfüllung des Satzungszwecks und zur Vereinsverwaltung erforderlich ist.</li>
                         <li value="2">Näheres kann in einer von der Mitgliederversammlung beschlossenen Datenschutzordnung geregelt werden.</li>
@@ -237,7 +237,7 @@ export default function SatzungPage() {
                 <Typography variant="h2">
                     § 18 Auflösung des Vereins
                 </Typography>
-                <Typography>
+                <Typography component="div">
                     <ol>
                         <li value="1">Die Auflösung kann nur in einer eigens zu diesem Zweck mit einer Frist von einem Monat einzuberufenden außerordentlichen Mitgliederversammlung beschlossen werden.</li>
                         <li value="2">Für den Auflösungsbeschluss ist eine Mehrheit von drei Vierteln der abgegebenen gültigen Stimmen erforderlich.</li>
