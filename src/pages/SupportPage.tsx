@@ -76,13 +76,14 @@ export default function SupportPage() {
     return (
         <Page>
             <PageBanner
-                src="/images/banners/wiese-mit-herbstlichem-wald.jpg"
-                alt="Wiese vor einem herbstlichen Wald"
-                eyebrow="Helfen Sie mit"
-                title={<><span>Gemeinsam helfen.</span><br /><em>Mit Ihrer Unterstützung.</em></>}
-                lead="Über Unterstützung für die Tiere freuen wir uns."
-                action={{ href: "#spenden", label: "Möglichkeiten ansehen" }}
-                objectPosition="center 53%"
+                src="/images/banners/gruenes-tal-mit-wald-und-wiesen.jpg"
+                alt="Grünes Tal mit Wald und Wiesen"
+                eyebrow="Gemeinsam für Tiere"
+                title={<><span>Gemeinsam Gutes möglich machen.</span><br /><em>Für Tiere in Not.</em></>}
+                lead="Mit Spenden, Mitgliedschaft und Patenschaften helfen Sie uns, Versorgung, Schutz und ein sicheres Zuhause möglich zu machen."
+                action={{ href: "#spenden", label: "So können Sie helfen" }}
+                objectPosition="center 57%"
+                tone="light"
             />
             <Section surface="strong" id="spenden">
                 <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">

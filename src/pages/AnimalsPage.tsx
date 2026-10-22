@@ -1,13 +1,12 @@
 import { css } from "@emotion/css";
 import Button from "../components/Button";
 import Grid from "../components/Grid";
-import Image from "../components/Image";
+import PageBanner from "../components/PageBanner";
 import Section from "../components/Section";
 import Typography from "../components/Typography";
 import Page from "./Page";
 
 const styles = {
-    intro: css`max-width: 820px; p { color: var(--color-text-light); line-height: 1.8; }`,
     copy: css`max-width: 620px; p { color: var(--color-text-light); line-height: 1.8; }`,
     gallery: css`
         display: grid;
@@ -127,41 +126,14 @@ const rabbits = [
 export default function AnimalsPage() {
     return (
         <Page>
-            <Section surface="soft">
-                <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
-                    <Grid size={{ xs: 12, md: 7 }}>
-                        <div className={styles.intro}>
-                            <Typography variant="eyebrow">Unsere Schützlinge</Typography>
-                            <Typography variant="h1" size="display">
-                                Jedes Tier hat eine Geschichte.<br />
-                                <em>Und verdient ein gutes Leben.</em>
-                            </Typography>
-                            <Typography component="p" variant="subtitle1" color="main">
-                                Wir sind ein kleiner Verein, dem das Wohl der Tiere am Herzen liegt.
-                            </Typography>
-                            <Typography variant="body1">
-                                Zurzeit beherbergen wir Kaninchen und Katzen, die vorrangig durch
-                                private Vermittlung zu uns gekommen sind, weil sie dringend ein
-                                gutes, artgerechtes Zuhause benötigt haben. Darunter klapperdürre
-                                Kätzchen aus einem Animal-Hoarding-Messiehaus, ein auf einer
-                                Müllhalde ausgesetztes Mutter-Tochter-Katzen-Duo und Kaninchen,
-                                eingepfercht auf ihren Exkrementen in einem Drahtverhau,
-                                ausgemergelt und jahrelang isoliert.
-                            </Typography>
-                        </div>
-                    </Grid>
-                    <Grid size={{ xs: 12, md: 5 }}>
-                        <Image
-                            src="/images/home/kaninchen-auf-wiese.webp"
-                            alt="Drei Kaninchen gemeinsam auf einer Wiese"
-                            loading="eager"
-                            displayHeight="380px"
-                            mobileHeight="290px"
-                        />
-                    </Grid>
-                </Grid>
-            </Section>
-
+            <PageBanner
+                src="/images/banners/kaninchengruppe-am-futternapf.jpg"
+                alt="Kaninchen versammeln sich gemeinsam an einem Futternapf"
+                eyebrow="Unsere Schützlinge"
+                title={<><span>Jedes Tier hat eine Geschichte.</span><br /><em>Und verdient ein gutes Leben.</em></>}
+                lead="Kaninchen und Katzen finden bei uns Schutz, Versorgung und ein artgerechtes Zuhause."
+                objectPosition="center 50%"
+            />
             <Section surface="soft" id="katzen">
                 <div className={styles.copy}>
                     <Typography variant="eyebrow">Unsere Katzen</Typography>

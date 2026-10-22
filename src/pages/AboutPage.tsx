@@ -18,8 +18,8 @@ export default function AboutPage() {
     return (
         <Page>
             <PageBanner
-                src="/images/banners/eifelwiese-mit-fernblick.jpg"
-                alt="Blick über die Eifellandschaft"
+                src="/images/banners/baum-unter-wolkenhimmel.jpg"
+                alt="Einzelner Baum unter einem weiten Wolkenhimmel"
                 eyebrow="Unsere Geschichte"
                 title={<><span>Aus einer privaten Initiative.</span><br /><em>Ein gemeinsames Anliegen.</em></>}
                 lead="Ursprünglich war das eine Aachener Privatinitiative, die wir nun auf eine breitere Basis gestellt haben."

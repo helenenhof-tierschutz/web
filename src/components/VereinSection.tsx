@@ -17,6 +17,11 @@ export default function VereinSection() {
             <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                 <Grid size={{ xs: 12, md: 6 }}>
                     <div className={styles.text}>
+                        <Typography variant="eyebrow">Der Verein</Typography>
+                        <Typography variant="h2" size="display">
+                            Gemeinsam gegründet.<br />
+                            <em>Für Tiere da.</em>
+                        </Typography>
                         <Typography variant="body1" color="muted">
                             So haben wir in einer generationsübergreifenden
                             Gründungsgruppe – der Jüngste 18 Jahre, die Älteste 74 Jahre –

@@ -19,20 +19,24 @@ export default function FarmPage() {
     return (
         <Page>
             <PageBanner
-                src="/images/banners/waldweg-im-gruenen.jpg"
-                alt="Waldweg im Grünen"
+                src="/images/banners/waldpfad-mit-sonnenstrahlen.jpg"
+                alt="Waldpfad mit Sonnenstrahlen"
                 eyebrow="Unser Hof"
                 title={<><span>Ein Ort zum Ankommen.</span><br /><em>Und zum Bleiben.</em></>}
-                lead="Der Hof liegt im schönen Dorf Steckenborn auf den Höhen über dem Rursee in der Nordeifel."
-                objectPosition="center 54%"
+                lead="Der Hof liegt im schönen Dorf Steckenborn auf den Höhen über dem Rursee in der Nordeifel – dort, wo die Welt noch ein wenig heiler ist."
+                objectPosition="center 58%"
             />
             <Section surface="none">
                 <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                     <Grid size={{ xs: 12, md: 6 }}>
                         <div className={styles.copy}>
+                            <Typography variant="eyebrow">Der neue Standort</Typography>
+                            <Typography variant="h2" size="display">
+                                Ein Zuhause mit Zukunft.<br />
+                                <em>Für jedes Tier.</em>
+                            </Typography>
                             <Typography variant="body1">
-                                Dort, wo die Welt noch ein wenig heiler ist. Im Sommer 2027
-                                werden alle Tiere auf den Helenenhof in
+                                Im Sommer 2027 werden alle Tiere auf den Helenenhof in
                                 Simmerath-Steckenborn ziehen. Dort erwartet sie ein
                                 weitläufiges Grundstück, ein mardersicheres Außengehege
                                 und für die Katzen Zugang ins Haus – für alle Vierbeiner

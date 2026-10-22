@@ -2,6 +2,7 @@ import { css } from "@emotion/css";
 import Grid from "../components/Grid";
 import Image from "../components/Image";
 import LocationMap from "../components/LocationMap";
+import PageBanner from "../components/PageBanner";
 import Section from "../components/Section";
 import Typography from "../components/Typography";
 import Page from "./Page";
@@ -19,18 +20,22 @@ const styles = {
 export default function ContactPage() {
     return (
         <Page>
+            <PageBanner
+                src="/images/banners/sonnenuntergang-ueber-huegellandschaft.jpg"
+                alt="Sonnenuntergang über einer Hügellandschaft"
+                eyebrow="Kontakt"
+                title={<><span>Wir freuen uns.</span><br /><em>Von Ihnen zu hören.</em></>}
+                lead="Schreiben Sie uns, wenn Sie Fragen zum Verein, zu den Tieren oder zu einer Unterstützung haben."
+                objectPosition="center 54%"
+            />
             <Section surface="soft">
                 <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                     <Grid size={{ xs: 12, md: 6 }}>
                         <div className={styles.content}>
-                            <Typography variant="eyebrow">Kontakt</Typography>
-                            <Typography variant="h1" size="display">
-                                Wir freuen uns.<br />
-                                <em>Von Ihnen zu hören.</em>
-                            </Typography>
-                            <Typography component="p" variant="subtitle1" color="main">
-                                Schreiben Sie uns, wenn Sie Fragen zum Verein, zu den
-                                Tieren oder zu einer Unterstützung haben.
+                            <Typography variant="eyebrow">So erreichen Sie uns</Typography>
+                            <Typography variant="h2" size="display">
+                                Wir sind für Sie da.<br />
+                                <em>Schreiben Sie uns.</em>
                             </Typography>
                             <address>
                                 Helenenhof – Tierschutzverein Nordeifel e. V.<br />
