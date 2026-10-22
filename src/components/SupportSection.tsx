@@ -48,7 +48,7 @@ export default function SupportSection() {
             <div className={styles.actions} aria-label="Möglichkeiten zu helfen">
                 <Button href="/unterstuetzen#spenden">Jetzt spenden <span aria-hidden="true">→</span></Button>
                 <Button href="/unterstuetzen#mitgliedschaft" variant="light">Mitglied werden <span aria-hidden="true">→</span></Button>
-                <Button href="/unterstuetzen#patenschaft" variant="light">Tierpatenschaft übernehmen <span aria-hidden="true">→</span></Button>
+                <Button href="/unterstuetzen#patenschaften" variant="light">Tierpatenschaft übernehmen <span aria-hidden="true">→</span></Button>
             </div>
         </Section>
     );

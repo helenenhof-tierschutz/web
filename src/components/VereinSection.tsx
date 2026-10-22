@@ -15,20 +15,23 @@ export default function VereinSection() {
         <Section surface="soft">
             <Grid container spacing={{ xs: 2, md: 6 }}>
                 <Grid size={{ xs: 12, md: 5 }}>
-                    <Typography variant="eyebrow">Tierschutz in der Nordeifel</Typography>
+                    <Typography variant="eyebrow">Unsere Geschichte</Typography>
                     <Typography variant="h1" size="display">
-                        Unser <em>Verein.</em>
+                        Aus einer privaten Initiative.<br />
+                        <em>Ein gemeinsames Anliegen.</em>
                     </Typography>
                 </Grid>
                 <Grid size={{ xs: 12, md: 7 }}>
                     <div className={styles.text}>
-                        <Typography variant="subtitle1" color="main">
-                            Wir arbeiten mit Ruhe, Geduld und Verantwortung.
+                        <Typography component="p" variant="subtitle1" color="main">
+                            Ursprünglich war das eine Aachener Privatinitiative, die wir
+                            nun auf eine breitere Basis gestellt haben.
                         </Typography>
                         <Typography variant="body1" color="muted">
-                            Nicht die schnelle Aufnahme möglichst vieler Tiere steht im
-                            Mittelpunkt, sondern eine gute, langfristig tragfähige
-                            Versorgung jedes einzelnen Tieres.
+                            So haben wir in einer generationsübergreifenden
+                            Gründungsgruppe – der Jüngste 18 Jahre, die Älteste 74 Jahre –
+                            den Verein ins Leben gerufen. Künftig möchten wir noch mehr
+                            verwaisten Tieren ein sicheres Heim bieten können.
                         </Typography>
                         <Typography variant="body1" color="muted">
                             Ins Leben gerufen wurde unser Verein am 24. Mai 2026 in

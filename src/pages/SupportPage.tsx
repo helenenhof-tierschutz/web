@@ -1,107 +1,62 @@
 import { useState } from "react";
+import { css } from "@emotion/css";
 import Button from "../components/Button";
-import Card from "../components/Card";
 import Grid from "../components/Grid";
 import Image from "../components/Image";
 import Section from "../components/Section";
 import Typography from "../components/Typography";
 import Page from "./Page";
-import { css } from "@emotion/css";
 
 const bankDetails = {
-    recipient: "Helenenhof Tierschutzverein",
+    recipient: "Helenenhof – Tierschutzverein",
     iban: "DE19 8306 5408 0007 0281 30",
     bank: "Deutsche Skatbank, Zweigniederlassung der VR-Bank Altenburger Land eG",
 };
 
-const supportOptions = [
-    {
-        title: "Spenden",
-        label: "Direkt helfen",
-        text: "Mit einer einmaligen oder regelmäßigen Spende finanzieren Sie Futter, Tierarztkosten und die tägliche Versorgung.",
-        href: "#spenden",
-        action: "Bankverbindung ansehen",
-    },
-    {
-        title: "Patenschaften",
-        label: "Langfristig begleiten",
-        text: "Eine Patenschaft unterstützt die Versorgung eines Tieres. Die Einzelheiten stimmen wir persönlich mit Ihnen ab.",
-        href: "mailto:info@helenenhof-tierschutz.de?subject=Tierpatenschaft%20anfragen",
-        action: "Patenschaft anfragen",
-        id: "patenschaft",
-    },
-    {
-        title: "Mitglied werden",
-        label: "Gemeinsam tragen",
-        text: "Mit Ihrer Mitgliedschaft geben Sie dem Verein Planungssicherheit. Der Antrag wird ausgefüllt und eingereicht.",
-        href: "/beitritterklaerung-2026.pdf",
-        action: "Antrag herunterladen",
-    },
-    {
-        title: "Ehrenamt",
-        label: "Zeit schenken",
-        text: "Ob Tierpflege, Fahrdienste, Reparaturen oder Veranstaltungen: Wir finden gemeinsam heraus, wo Ihre Hilfe passt.",
-        href: "mailto:info@helenenhof-tierschutz.de?subject=Ehrenamt%20anfragen",
-        action: "Ehrenamt anfragen",
-    },
-];
-
 const styles = {
-    introCopy: css`
-        h1 { max-width: 760px; }
-        p { max-width: 620px; color: var(--color-text-light); font-size: 1.08rem; line-height: 1.8; }
-    `,
-    sectionHeading: css`
-        max-width: 700px;
-        margin-bottom: 36px;
-        h2 { margin: 0 0 12px; }
-        p { color: var(--color-text-light); line-height: 1.75; }
-    `,
-    optionContent: css`
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 24px;
-        h3 { margin: 0 0 12px; }
-        p { color: var(--color-text-light); line-height: 1.7; }
-        a { margin-top: auto; padding-top: 16px; color: var(--color-accent); font-weight: 700; }
-        a:hover { text-decoration: underline; text-underline-offset: 4px; }
-    `,
+    copy: css`max-width: 620px; p { line-height: 1.8; }`,
     bankPanel: css`
-        padding: 28px;
-        border: 1px solid color-mix(in srgb, var(--color-white) 18%, transparent);
-        border-radius: var(--border-radius);
-        background: color-mix(in srgb, var(--color-white) 7%, transparent);
-        dl { margin: 20px 0 0; }
-        dt { color: color-mix(in srgb, var(--color-on-main) 68%, transparent); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
-        dd { margin: 5px 0 18px; overflow-wrap: anywhere; font-size: 1rem; }
+        padding: clamp(24px, 4vw, 42px);
+        border: 1px solid color-mix(in srgb, var(--color-white) 28%, transparent);
+        background: color-mix(in srgb, var(--color-white) 8%, transparent);
+        dl { margin: 24px 0 0; }
+        dt { margin-top: 16px; color: color-mix(in srgb, var(--color-on-main) 74%, transparent); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+        dd { margin: 5px 0 0; overflow-wrap: anywhere; line-height: 1.6; }
     `,
     copyButton: css`
-        display: inline-flex;
-        min-height: 40px;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 12px;
-        border: 1px solid color-mix(in srgb, var(--color-on-main) 35%, transparent);
-        border-radius: var(--border-radius);
+        min-height: 44px;
+        margin-top: 22px;
+        padding: 9px 15px;
+        border: 1px solid var(--color-on-main);
         background: transparent;
         color: var(--color-on-main);
         font: inherit;
         font-size: 0.85rem;
         font-weight: 700;
         cursor: pointer;
-        &:hover { background: color-mix(in srgb, var(--color-on-main) 10%, transparent); }
+        &:hover { background: color-mix(in srgb, var(--color-on-main) 12%, transparent); }
         &:focus-visible { outline: 3px solid var(--color-accent-light); outline-offset: 3px; }
     `,
     fees: css`
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-block: 20px;
-        span { display: inline-flex; flex-direction: column; gap: 3px; min-width: 150px; padding: 12px 16px; border-radius: var(--border-radius); background: var(--color-cream); }
-        strong { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; }
-        small { color: var(--color-text-light); }
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-block: 28px;
+        @media (max-width: 520px) { grid-template-columns: 1fr; }
+    `,
+    fee: css`
+        padding: 20px;
+        background: var(--color-cream);
+        strong { display: block; color: var(--color-main); font-family: var(--font-serif); font-size: 2rem; font-weight: 500; }
+        span { color: var(--color-text-light); font-size: 0.87rem; line-height: 1.5; }
+    `,
+    note: css`color: var(--color-text-light); font-size: 0.85rem; line-height: 1.7;`,
+    application: css`
+        max-width: 480px;
+        padding: clamp(24px, 4vw, 36px);
+        border: 1px solid var(--color-border);
+        background: var(--color-bg-light);
+        p { color: var(--color-text-light); line-height: 1.8; }
     `,
 };
 
@@ -119,139 +74,163 @@ export default function SupportPage() {
 
     return (
         <Page>
-            <Section surface="soft" spacing="intro">
-                <Grid container spacing={6} alignItems="center">
+            <Section surface="soft">
+                <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                     <Grid size={{ xs: 12, md: 7 }}>
-                        <div className={styles.introCopy}>
-                            <Typography variant="eyebrow">Jetzt unterstützen</Typography>
-                            <Typography variant="h1">Ihre Hilfe schenkt Tieren ein gutes Leben.</Typography>
-                            <Typography variant="body1">
-                                Ob mit einer Spende, einer Patenschaft, als Vereinsmitglied oder mit Ihrer Zeit: Jede Form der Unterstützung hilft unserem kleinen Verein, verlässlich für die Tiere da zu sein.
+                        <div className={styles.copy}>
+                            <Typography variant="eyebrow">Helfen Sie mit</Typography>
+                            <Typography variant="h1" size="display">
+                                Gemeinsam helfen.<br />
+                                <em>Mit Ihrer Unterstützung.</em>
                             </Typography>
-                            <div>
-                                <Button href="#wege">Wege zu helfen</Button>
-                            </div>
+                            <Typography component="p" variant="subtitle1" color="main">
+                                Über Unterstützung für die Tiere freuen wir uns.
+                            </Typography>
+                            <Typography variant="body1" color="muted">
+                                Tierpatenschaften und andere finanzielle Fördermöglichkeiten
+                                machen die Versorgung planbar und dauerhaft möglich.
+                            </Typography>
+                            <Button href="#spenden">Möglichkeiten ansehen</Button>
                         </div>
                     </Grid>
                     <Grid size={{ xs: 12, md: 5 }}>
                         <Image
-                            src="/images/917FC02F-D7F5-44BC-8FBC-F51CD53B3C92.jpeg"
-                            alt="Der Helenenhof"
-                            loading="lazy"
-                            displayHeight="420px"
-                            mobileHeight="clamp(280px, 75vw, 420px)"
+                            src="/images/home/kaninchen-vor-stall.webp"
+                            alt="Braunes Schlappohrkaninchen vor einem Holzstall"
+                            loading="eager"
+                            displayHeight="430px"
                         />
                     </Grid>
                 </Grid>
             </Section>
 
-            <Section surface="none" id="wege">
-                <div className={styles.sectionHeading}>
-                    <Typography variant="eyebrow">So können Sie helfen</Typography>
-                    <Typography variant="h2">Was zu Ihnen passt, hilft uns weiter.</Typography>
-                    <Typography variant="body1">
-                        Manchmal ist es ein regelmäßiger Beitrag, manchmal ein freier Nachmittag. Entscheidend ist, dass aus Mitgefühl konkrete Hilfe wird.
-                    </Typography>
-                </div>
-                <Grid container spacing={3}>
-                    {supportOptions.map((option) => (
-                        <Grid key={option.title} size={{ xs: 12, sm: 6, lg: 3 }}>
-                            <Card surface="paper" hoverable sx={{ height: "100%" }} id={option.id}>
-                                <div className={styles.optionContent}>
-                                    <Typography variant="eyebrow">{option.label}</Typography>
-                                    <Typography variant="h3">{option.title}</Typography>
-                                    <Typography variant="body1">{option.text}</Typography>
-                                    <a href={option.href}>
-                                        {option.action} <span aria-hidden="true">→</span>
-                                    </a>
-                                </div>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Section>
-
             <Section surface="strong" id="spenden">
-                <Grid container spacing={5} alignItems="center">
-                    <Grid size={{ xs: 12, md: 5 }}>
-                        <Typography variant="eyebrow">Geld spenden</Typography>
-                        <Typography variant="h2">Direkt helfen. Ohne Umwege.</Typography>
-                        <Typography variant="body1">
-                            Mit Ihrer Spende tragen Sie dazu bei, dass die Tiere am Helenenhof zuverlässig versorgt werden können. Überweisen Sie Ihren Wunschbetrag direkt auf das Vereinskonto.
-                        </Typography>
-                        <p>
-                            Als Verwendungszweck eignet sich „Freie Spende“ oder „Spende“ mit dem Namen eines Projekts.
-                        </p>
+                <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
+                    <Grid size={{ xs: 12, md: 6 }}>
+                        <div className={styles.copy}>
+                            <Typography variant="eyebrow">Spenden</Typography>
+                            <Typography variant="h2" size="display">
+                                Jeder Euro hilft.<br />
+                                <em>Ganz unmittelbar.</em>
+                            </Typography>
+                            <Typography variant="body1">
+                                Der einfachste Weg, uns zu unterstützen, ist eine
+                                Überweisung an die folgende Bankverbindung. Jeder Euro
+                                hilft. Etwas Sinnvolles zu tun, kann so einfach sein …
+                            </Typography>
+                            <Typography variant="body1">
+                                Wenn Sie eine Zuwendungsbestätigung benötigen, schreiben
+                                Sie uns bitte an <a href="mailto:info@helenenhof-tierschutz.de">info@helenenhof-tierschutz.de</a>.
+                            </Typography>
+                        </div>
                     </Grid>
-                    <Grid size={{ xs: 12, md: 7 }}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <div className={styles.bankPanel}>
-                            <Typography variant="eyebrow">Spendenkonto</Typography>
+                            <Typography variant="eyebrow">Vereinskonto</Typography>
                             <Typography variant="h3">Bankverbindung</Typography>
                             <dl>
-                                <dt>Empfänger</dt>
+                                <dt>Kontoinhaber</dt>
                                 <dd>{bankDetails.recipient}</dd>
-                                <dt>Kreditinstitut</dt>
-                                <dd>{bankDetails.bank}</dd>
                                 <dt>IBAN</dt>
                                 <dd>{bankDetails.iban}</dd>
+                                <dt>Bank</dt>
+                                <dd>{bankDetails.bank}</dd>
+                                <dt>Verwendungszweck</dt>
+                                <dd>z. B. „Freie Spende“ oder „Spende [Projektname]“</dd>
                             </dl>
                             <button type="button" className={styles.copyButton} onClick={copyIban}>
-                                {copyMessage || "IBAN kopieren"}
+                                IBAN kopieren
                             </button>
-                            <span className="sr-only" aria-live="polite">{copyMessage}</span>
+                            <span className="sr-only" role="status" aria-live="polite">{copyMessage}</span>
                         </div>
                     </Grid>
                 </Grid>
             </Section>
 
-            <Section surface="soft" id="mitgliedschaft">
-                <Grid container spacing={5} alignItems="center">
+            <Section surface="none" id="mitgliedschaft">
+                <Grid container spacing={{ xs: 2, md: 6 }}>
                     <Grid size={{ xs: 12, md: 7 }}>
-                        <Typography variant="eyebrow">Mitglied werden</Typography>
-                        <Typography variant="h2">Dauerhaft an unserer Seite.</Typography>
-                        <Typography variant="body1">
-                            Als Mitglied geben Sie dem Verein Planungssicherheit und tragen die Arbeit für die Tiere langfristig mit.
-                        </Typography>
-                        <div className={styles.fees}>
-                            <span><strong>24 €</strong><small>regulärer Jahresbeitrag</small></span>
-                            <span><strong>12 €</strong><small>ermäßigter Jahresbeitrag</small></span>
-                        </div>
-                        <Typography variant="body2" color="muted">
-                            Ermäßigung für Schüler, Auszubildende, Studierende, Senioren, Arbeitslose und Menschen mit Schwerbehinderung ab GdB 50.
-                        </Typography>
-                    </Grid>
-                    <Grid size={{ xs: 12, md: 5 }}>
-                        <Card surface="paper" sx={{ padding: 28 }}>
-                            <Typography variant="h3">Jetzt beitreten</Typography>
-                            <Typography variant="body1">
-                                Laden Sie die Beitrittserklärung herunter, füllen Sie sie aus und senden Sie sie per Post oder eingescannt per E-Mail an den Verein.
+                        <div className={styles.copy}>
+                            <Typography variant="eyebrow">Mitglied werden</Typography>
+                            <Typography variant="h2" size="display">
+                                Teil unserer Gemeinschaft.<br />
+                                <em>Teil unserer Hilfe.</em>
                             </Typography>
-                            <p>Helenenhof – Tierschutzverein Nordeifel e.V.<br />In Steckenborn 35<br />52152 Simmerath</p>
-                            <Button href="/beitritterklaerung-2026.pdf" download>
-                                Beitrittserklärung herunterladen
+                            <Typography component="p" variant="subtitle1" color="main">
+                                Keine Frage, dass wir uns über neue Mitglieder freuen.
+                            </Typography>
+                            <Typography variant="body1" color="muted">
+                                Der reguläre Jahresbeitrag beträgt 24,00 Euro. Also zwei
+                                Euro im Monat, dafür gibt es kaum mehr einen Cappuccino –
+                                aber ein unbeschwertes Leben für Blacky & Co.
+                            </Typography>
+                            <div className={styles.fees}>
+                                <div className={styles.fee}><strong>24 €</strong><span>regulär pro Jahr</span></div>
+                                <div className={styles.fee}><strong>12 €</strong><span>ermäßigt pro Jahr</span></div>
+                                <div className={styles.fee}><strong>40 €</strong><span>Familien pro Jahr*</span></div>
+                                <div className={styles.fee}><strong>180 €</strong><span>juristische Personen pro Jahr*</span></div>
+                            </div>
+                            <p className={styles.note}>
+                                Laut Beitrittserklärung gilt die Ermäßigung für Schüler,
+                                Auszubildende, Studierende, Senioren, Arbeitslose und
+                                Menschen mit Schwerbehinderung ab GdB 50. Ein formloser
+                                Nachweis genügt.
+                            </p>
+                            <p className={styles.note}>
+                                * Die Beiträge für Familien und juristische Personen
+                                stehen auf der ursprünglichen Vereinsseite, aber nicht
+                                in der vorhandenen Beitrittserklärung. Bitte fragen Sie
+                                für diese Mitgliedschaften direkt beim Verein nach.
+                            </p>
+                        </div>
+                    </Grid>
+                    <Grid size={{ xs: 12, md: 5 }}>
+                        <div className={styles.application}>
+                            <Typography variant="eyebrow">Mitgliedsantrag</Typography>
+                            <Typography variant="h3">Beitrittserklärung</Typography>
+                            <Typography variant="body1">
+                                Die offizielle Beitrittserklärung kann am Bildschirm oder
+                                in Druckbuchstaben ausgefüllt werden. Bitte senden Sie
+                                sie unterschrieben per Post oder E-Mail an den Verein.
+                            </Typography>
+                            <Button href="/documents/beitritterklaerung-2026.pdf" target="_blank" rel="noopener noreferrer">
+                                Antrag öffnen
                             </Button>
-                        </Card>
+                        </div>
                     </Grid>
                 </Grid>
             </Section>
 
-            <Section surface="none" id="ehrenamt">
-                <Grid container spacing={4} alignItems="center">
-                    <Grid size={{ xs: 12, md: 7 }}>
-                        <Typography variant="eyebrow">Ehrenamtlich helfen</Typography>
-                        <Typography variant="h2">Ihre Zeit ist ein Geschenk.</Typography>
-                        <Typography variant="body1">
-                            Auf einem Hof gibt es immer etwas zu tun. Wenn Sie regelmäßig oder punktuell helfen möchten, melden Sie sich gern. Gemeinsam finden wir eine Aufgabe, die zu Ihren Möglichkeiten und Erfahrungen passt.
-                        </Typography>
+            <Section surface="soft" id="patenschaften">
+                <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
+                    <Grid size={{ xs: 12, md: 6 }}>
+                        <Image
+                            src="/images/home/orange-weisse-katze.webp"
+                            alt="Orange-weiße Katze im Gras"
+                            loading="lazy"
+                        />
                     </Grid>
-                    <Grid size={{ xs: 12, md: 5 }}>
-                        <Card surface="soft" sx={{ padding: 28 }}>
-                            <Typography variant="h3">Wo Hilfe gebraucht wird</Typography>
-                            <Typography variant="body1">Tierpflege, Bauen und Reparieren, Fahrdienste und Veranstaltungen.</Typography>
-                            <Button href="mailto:info@helenenhof-tierschutz.de?subject=Ehrenamt%20anfragen">
-                                Ehrenamt anfragen
+                    <Grid size={{ xs: 12, md: 6 }}>
+                        <div className={styles.copy}>
+                            <Typography variant="eyebrow">Tierpatenschaften</Typography>
+                            <Typography variant="h2" size="display">
+                                Ein Tier unterstützen.<br />
+                                <em>Ganz persönlich.</em>
+                            </Typography>
+                            <Typography component="p" variant="subtitle1" color="main">
+                                Nach individueller Absprache bieten wir zusätzlich
+                                Tierpatenschaften an.
+                            </Typography>
+                            <Typography variant="body1" color="muted">
+                                Mit einer solchen Tierpatenschaft übernehmen Sie einen
+                                Teil der Kosten für Futter, Pflege und tierärztliche
+                                Versorgung eines bestimmten Tieres. Die Einzelheiten
+                                stimmen wir persönlich mit Ihnen ab.
+                            </Typography>
+                            <Button href="mailto:info@helenenhof-tierschutz.de?subject=Anfrage%20zur%20Tierpatenschaft">
+                                Patenschaft anfragen
                             </Button>
-                        </Card>
+                        </div>
                     </Grid>
                 </Grid>
             </Section>

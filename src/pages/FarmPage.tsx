@@ -21,18 +21,22 @@ export default function FarmPage() {
                 <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                     <Grid size={{ xs: 12, md: 6 }}>
                         <div className={styles.copy}>
-                            <Typography variant="eyebrow">Ein Ort für Tiere</Typography>
+                            <Typography variant="eyebrow">Unser Hof</Typography>
                             <Typography variant="h1" size="display">
-                                Der <em>Helenenhof.</em>
+                                Ein Ort zum Ankommen.<br />
+                                <em>Und zum Bleiben.</em>
                             </Typography>
-                            <Typography variant="subtitle1" color="main">
+                            <Typography component="p" variant="subtitle1" color="main">
                                 Der Hof liegt im schönen Dorf Steckenborn auf den Höhen
                                 über dem Rursee in der Nordeifel.
                             </Typography>
                             <Typography variant="body1">
-                                Dort, wo die Welt noch ein wenig heiler ist. Im Sommer
-                                2027 werden alle Tiere auf den Helenenhof in
-                                Simmerath-Steckenborn ziehen.
+                                Dort, wo die Welt noch ein wenig heiler ist. Im Sommer 2027
+                                werden alle Tiere auf den Helenenhof in
+                                Simmerath-Steckenborn ziehen. Dort erwartet sie ein
+                                weitläufiges Grundstück, ein mardersicheres Außengehege
+                                und für die Katzen Zugang ins Haus – für alle Vierbeiner
+                                ist selbstverständlich eine solide Rund-um-Versorgung garantiert.
                             </Typography>
                         </div>
                     </Grid>
@@ -58,15 +62,10 @@ export default function FarmPage() {
                     </Grid>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <div className={styles.copy}>
-                            <Typography variant="eyebrow">Platz für ein gutes Leben</Typography>
+                            <Typography variant="eyebrow">Ein Blick in die Zukunft</Typography>
                             <Typography variant="h2" size="display">
-                                Was auf dem Hof <em>entsteht.</em>
-                            </Typography>
-                            <Typography variant="body1">
-                                Dort erwartet die Tiere ein weitläufiges Grundstück,
-                                ein mardersicheres Außengehege und für die Katzen Zugang
-                                ins Haus. Für alle Vierbeiner ist eine solide
-                                Rund-um-Versorgung vorgesehen.
+                                Neue Möglichkeiten.<br />
+                                <em>Für weitere Schützlinge.</em>
                             </Typography>
                             <Typography variant="body1">
                                 Aktuell wird in der Nordeifel ein Stallgebäude erweitert,
@@ -76,6 +75,33 @@ export default function FarmPage() {
                                 steht zur Verfügung.
                             </Typography>
                             <Button href="/ueber-uns">Den Verein kennenlernen</Button>
+                        </div>
+                    </Grid>
+                </Grid>
+            </Section>
+
+            <Section surface="none">
+                <Grid container spacing={{ xs: 2, md: 6 }}>
+                    <Grid size={{ xs: 12, md: 5 }}>
+                        <Typography variant="eyebrow">Den Helenenhof erleben</Typography>
+                        <Typography variant="h2" size="display">
+                            Leise. Langsam.<br />
+                            <em>Liebevoll.</em>
+                        </Typography>
+                    </Grid>
+                    <Grid size={{ xs: 12, md: 7 }}>
+                        <div className={styles.copy}>
+                            <Typography variant="body1">
+                                Besuche auf dem Hof sind derzeit noch nicht möglich.
+                                Hoffeste sind geplant. Ebenso kurzweilige Nachmittage
+                                mit Kindern, Senioren oder anderen Interessierten,
+                                denen wir vor Ort zeigen möchten, wie bereichernd der
+                                Kontakt zu Tieren sein kann.
+                            </Typography>
+                            <Typography variant="body1">
+                                Gemäß dem Motto – „leise, langsam, liebevoll“.
+                            </Typography>
+                            <Button href="/kontakt">Kontakt aufnehmen</Button>
                         </div>
                     </Grid>
                 </Grid>

@@ -16,7 +16,15 @@ const styles = {
         background: var(--color-cream-dark);
         h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.3; }
         p { margin: 0; color: var(--color-text-light); font-size: 0.9rem; line-height: 1.6; }
-        p:last-child { margin-top: 12px; }
+    `,
+    portrait: css`
+        display: block;
+        width: 82px;
+        height: 82px;
+        margin-bottom: 18px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center 28%;
     `,
 };
 
@@ -24,29 +32,30 @@ const vorstandMembers = [
     {
         name: "Ursula Kals",
         role: "Vorsitzende",
-        description:
-            "Als leidenschaftliche Tierfreundin hat Ursula Kals den Helenenhof ins Leben gerufen. Mit viel Herzblut setzt sie sich dafür ein, Tieren in Not ein sicheres Zuhause zu geben.",
     },
     {
         name: "Claus M. Wolf",
         role: "Stellvertretender Vorsitzender",
-        description:
-            "Claus Wolf ist Katzenliebhaber durch und durch. In seinem Zuhause im schönen Eilendorf dreht sich vieles um seine geliebten Vierbeiner.",
     },
     {
         name: "Constantin Kals",
         role: "Schatzmeister",
-        description:
-            "Constantin Kals kümmert sich um die Finanzen und die Organisation im Hintergrund. Bei Fragen zu Spenden und finanzieller Unterstützung ist er der richtige Ansprechpartner.",
+        image: "/images/team/constantin-kals.webp",
     },
 ];
 
 export default function VorstandSection() {
     return (
-        <Section surface="none">
+        <Section surface="soft">
             <header className={styles.heading}>
-                <Typography variant="eyebrow">Helenenhof</Typography>
-                <Typography variant="h2" id="vorstand-title">Der Vorstand</Typography>
+                <Typography variant="eyebrow">Unser Team</Typography>
+                <Typography variant="h2" size="display" id="vorstand-title">
+                    Menschen, die sich kümmern.<br />
+                    <em>Mit Herz und Verantwortung.</em>
+                </Typography>
+                <Typography variant="body1" color="muted">
+                    Der gewählte Vorstand besteht derzeit aus:
+                </Typography>
             </header>
 
             <Grid container spacing={3}>
@@ -57,9 +66,9 @@ export default function VorstandSection() {
                         key={member.name}
                     >
                         <div className={styles.memberInfo}>
+                            {member.image && <img className={styles.portrait} src={member.image} alt={member.name} loading="lazy" />}
                             <Typography variant="h3">{member.name}</Typography>
                             <Typography variant="body1">{member.role}</Typography>
-                            <Typography variant="body1">{member.description}</Typography>
                         </div>
                     </Grid>
                 ))}

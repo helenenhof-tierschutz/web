@@ -51,7 +51,7 @@ const missions = [
         title: "Aufklärung der Öffentlichkeit",
         paragraphs: [
             "Wir informieren über artgerechte Tierhaltung und Tierschutz, machen die Bedürfnisse der Tiere sichtbar und bemühen uns, Wissen über einen anständigen Umgang mit Lebewesen zu vermitteln.",
-            "Besuche auf dem Hof sind nach Voranmeldung möglich. Hoffeste sind geplant. Ebenso kurzweilige Nachmittage mit Kindern, Senioren oder anderen Interessierten, denen wir vor Ort zeigen möchten, wie bereichernd der Kontakt zu Tieren sein kann.",
+            "Besuche auf dem Hof sind derzeit noch nicht möglich. Für später sind Hoffeste und Nachmittage mit Kindern, Senioren oder anderen Interessierten geplant. Dann möchten wir vor Ort zeigen, wie bereichernd der Kontakt zu Tieren sein kann.",
             "Gemäß dem Motto – „leise, langsam, liebevoll“.",
         ],
     },

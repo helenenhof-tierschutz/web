@@ -132,6 +132,7 @@ export default function Footer() {
 
                     <nav className={styles.links}>
                         <Typography variant="eyebrow">Informationen</Typography>
+                        <a href="/kontakt">Kontakt</a>
                         <a href="/satzung">Satzung</a>
                         <a href="/impressum">Impressum</a>
                         <a href="/datenschutz">Datenschutz</a>

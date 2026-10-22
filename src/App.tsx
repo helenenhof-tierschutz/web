@@ -7,6 +7,7 @@ import DatenschutzPage from "./pages/DatenschutzPage";
 import AboutPage from "./pages/AboutPage";
 import FarmPage from "./pages/FarmPage";
 import SupportPage from "./pages/SupportPage";
+import ContactPage from "./pages/ContactPage";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         />
         <Route path="/helenenhof" element={<FarmPage />} />
         <Route path="/unterstuetzen" element={<SupportPage />} />
+        <Route path="/kontakt" element={<ContactPage />} />
         <Route path="/satzung" element={<SatzungPage />} />
         <Route path="/impressum" element={<ImpressumPage />} />
         <Route path="/datenschutz" element={<DatenschutzPage />} />
