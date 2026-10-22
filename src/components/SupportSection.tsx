@@ -34,6 +34,10 @@ const styles = {
         gap: 14px;
         a { width: 100%; justify-content: space-between; }
     `,
+    actionsHeading: css`
+        margin: 0 0 3px;
+        color: var(--color-accent);
+    `,
     image: css`
         display: block;
         width: 100%;
@@ -77,6 +81,9 @@ export default function SupportSection() {
                 loading="lazy"
             />
             <div className={[styles.actions, "support-actions"].join(" ")} aria-label="Möglichkeiten zu helfen">
+                <Typography component="p" variant="eyebrow" className={styles.actionsHeading}>
+                    So können Sie helfen
+                </Typography>
                 <Button href="/unterstuetzen#spenden">Jetzt spenden <span aria-hidden="true">→</span></Button>
                 <Button href="/unterstuetzen#mitgliedschaft" variant="light">Mitglied werden <span aria-hidden="true">→</span></Button>
                 <Button href="/unterstuetzen#patenschaften" variant="light">Tierpatenschaft übernehmen <span aria-hidden="true">→</span></Button>

@@ -109,7 +109,7 @@ export default function Hero() {
 
         <div className={styles.actions}>
           <Button href="#unsere-schuetzlinge">
-            Unsere Schützlinge kennenlernen
+            Unsere Tiere kennenlernen
           </Button>
         </div>
       </div>

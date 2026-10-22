@@ -59,13 +59,29 @@ const styles = {
         p {
             max-width: 360px;
             margin: 0 auto 13px;
+            font-size: 0.95rem;
             line-height: 1.75;
         }
         p:last-child { margin-bottom: 0; }
 
+        .mission-link {
+            display: inline-flex;
+            margin-top: 20px;
+            color: var(--color-main);
+            font-size: 0.92rem;
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration-color: var(--color-accent);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 5px;
+        }
+
+        .mission-link:hover { color: var(--color-accent-hover); }
+
         @media (max-width: 599px) {
             padding: 0;
             .mission-icon { width: 68px; height: 68px; }
+            p { font-size: 0.96rem; line-height: 1.8; }
         }
     `,
 };
@@ -102,6 +118,7 @@ const missions = [
             "Über Unterstützung für die Tiere freuen wir uns. Tierpatenschaften und andere finanzielle Fördermöglichkeiten machen die Versorgung planbar und dauerhaft möglich.",
             "Sie helfen uns dabei, die Kosten für gutes Futter, Pflege und notwendige tierärztliche Behandlungen zu tragen. So können wir unseren Schützlingen langfristig ein sicheres, artgerechtes Zuhause bieten und künftig weiteren hilfsbedürftigen Tieren helfen.",
         ],
+        link: { href: "/unterstuetzen#patenschaften", label: "Tierpatenschaft anfragen" },
     },
     {
         title: "Aufklärung der Öffentlichkeit",
@@ -131,6 +148,11 @@ export default function MissionSection() {
                         {mission.paragraphs.map((paragraph) => (
                             <Typography variant="body2" color="muted" key={paragraph}>{paragraph}</Typography>
                         ))}
+                        {mission.link && (
+                            <a className="mission-link" href={mission.link.href}>
+                                {mission.link.label} <span aria-hidden="true">→</span>
+                            </a>
+                        )}
                     </article>
                 ))}
             </div>

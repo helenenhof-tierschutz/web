@@ -2,6 +2,7 @@ import { css } from "@emotion/css";
 import Button from "../components/Button";
 import Grid from "../components/Grid";
 import Image from "../components/Image";
+import PageBanner from "../components/PageBanner";
 import Section from "../components/Section";
 import Typography from "../components/Typography";
 import VorstandSection from "../components/VorstandSection";
@@ -16,6 +17,11 @@ const copy = css`
 export default function AboutPage() {
     return (
         <Page>
+            <PageBanner
+                src="/images/banners/eifelwiese-mit-fernblick.jpg"
+                alt="Blick über die Eifellandschaft"
+                objectPosition="center 58%"
+            />
             <VereinSection />
 
             <Section surface="none">
@@ -53,15 +59,13 @@ export default function AboutPage() {
 
             <Section surface="none">
                 <Grid container spacing={{ xs: 2, md: 6 }}>
-                    <Grid size={{ xs: 12, md: 5 }}>
-                        <Typography variant="eyebrow">Unser Vereinsgedanke</Typography>
-                        <Typography variant="h2" size="display">
-                            Zusammenarbeiten.<br />
-                            <em>Verantwortung tragen.</em>
-                        </Typography>
-                    </Grid>
-                    <Grid size={{ xs: 12, md: 7 }}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <div className={copy}>
+                            <Typography variant="eyebrow">Unser Vereinsgedanke</Typography>
+                            <Typography variant="h2" size="display">
+                                Zusammenarbeiten.<br />
+                                <em>Verantwortung tragen.</em>
+                            </Typography>
                             <Typography variant="body1">
                                 Wir bauen derzeit die Zusammenarbeit mit Tierärzten,
                                 anderen Tierschutzorganisationen und Pflegestellen aus.
@@ -77,6 +81,13 @@ export default function AboutPage() {
                             </Typography>
                             <Button href="/helenenhof">Den Helenenhof ansehen</Button>
                         </div>
+                    </Grid>
+                    <Grid size={{ xs: 12, md: 6 }}>
+                        <Image
+                            src="/images/home/orange-weisse-katze.webp"
+                            alt="Orange-weiße Katze im Gras"
+                            loading="lazy"
+                        />
                     </Grid>
                 </Grid>
             </Section>

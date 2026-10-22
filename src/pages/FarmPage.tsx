@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import Grid from "../components/Grid";
 import Image from "../components/Image";
 import LocationMap from "../components/LocationMap";
+import PageBanner from "../components/PageBanner";
 import Section from "../components/Section";
 import Typography from "../components/Typography";
 import Page from "./Page";
@@ -17,6 +18,11 @@ const styles = {
 export default function FarmPage() {
     return (
         <Page>
+            <PageBanner
+                src="/images/banners/waldweg-im-gruenen.jpg"
+                alt="Waldweg im Grünen"
+                objectPosition="center 54%"
+            />
             <Section surface="none">
                 <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                     <Grid size={{ xs: 12, md: 6 }}>

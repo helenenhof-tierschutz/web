@@ -3,6 +3,7 @@ import { css } from "@emotion/css";
 import Button from "../components/Button";
 import Grid from "../components/Grid";
 import Image from "../components/Image";
+import PageBanner from "../components/PageBanner";
 import Section from "../components/Section";
 import Typography from "../components/Typography";
 import Page from "./Page";
@@ -74,6 +75,11 @@ export default function SupportPage() {
 
     return (
         <Page>
+            <PageBanner
+                src="/images/banners/wiese-mit-herbstlichem-wald.jpg"
+                alt="Wiese vor einem herbstlichen Wald"
+                objectPosition="center 53%"
+            />
             <Section surface="soft">
                 <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                     <Grid size={{ xs: 12, md: 7 }}>
@@ -199,8 +205,8 @@ export default function SupportPage() {
                 <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Image
-                            src="/images/home/orange-weisse-katze.webp"
-                            alt="Orange-weiße Katze im Gras"
+                            src="/images/home/tierpatenschaft-kaninchen.png"
+                            alt="Eine Person füttert ein braunes Schlappohrkaninchen mit Löwenzahn"
                             loading="lazy"
                         />
                     </Grid>
