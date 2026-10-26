@@ -4,87 +4,90 @@ import Section from "./Section";
 import Typography from "./Typography";
 
 const styles = {
-    supportLayout: css`
+    layout: css`
         display: grid;
-        grid-template-columns: 0.85fr 1fr;
-        gap: clamp(50px, 9vw, 125px);
-        align-items: start;
-        @media (max-width: 760px) { grid-template-columns: 1fr; gap: 30px; }
+        grid-template-columns: minmax(0, 1.05fr) minmax(190px, 0.62fr) minmax(0, 0.8fr);
+        gap: clamp(28px, 4vw, 64px);
+        align-items: stretch;
+        @media (max-width: 900px) {
+            grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+            .support-image { grid-row: 2; }
+            .support-actions { grid-row: 2; }
+        }
+        @media (max-width: 640px) {
+            grid-template-columns: 1fr;
+            .support-image, .support-actions { grid-row: auto; }
+        }
     `,
-    supportIntro: css`
-        h2 { margin-top: 0; margin-bottom: 26px; }
-        & > p { max-width: 450px; margin-bottom: 30px; color: var(--color-cream-dark); font-size: 0.95rem; line-height: 1.95; }
+    copy: css`
+        h2 { margin-bottom: 28px; }
+        p { max-width: 600px; color: var(--color-cream-dark); line-height: 1.8; }
     `,
-    supportList: css`border-top: 1px solid color-mix(in srgb, var(--color-white) 20%, transparent);`,
-    supportItem: css`
+    lead: css`
+        color: var(--color-white) !important;
+        font-family: var(--font-serif);
+        font-size: 1.35rem;
+    `,
+    actions: css`
         display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        align-items: start;
-        padding: 28px 0;
-        border-bottom: 1px solid color-mix(in srgb, var(--color-white) 20%, transparent);
-        h3 { margin-top: 0; margin-bottom: 9px; font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500; }
-        p { margin-top: 0; margin-bottom: 0; color: var(--color-cream-dark); font-size: 0.85rem; line-height: 1.8; }
+        align-content: center;
+        gap: 14px;
+        a { width: 100%; justify-content: space-between; }
+    `,
+    actionsHeading: css`
+        margin: 0 0 3px;
+        color: var(--color-accent);
+    `,
+    image: css`
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 250px;
+        max-height: 355px;
+        object-fit: cover;
+        object-position: 57% center;
+        @media (max-width: 900px) { min-height: 280px; }
+        @media (max-width: 640px) {
+            height: auto;
+            min-height: 0;
+            max-height: none;
+            aspect-ratio: 4 / 3;
+        }
     `,
 };
 
-const waysToHelp = [
-    {
-        title: "Spenden",
-        text: "Mit einer Spende helfen Sie, Futter, medizinische Versorgung und den Alltag der Tiere zu finanzieren.",
-    },
-    {
-        title: "Tierpatenschaften",
-        text: "Regelmäßige Unterstützung hilft uns, die Versorgung unserer Schützlinge langfristig zu planen.",
-    },
-    {
-        title: "Engagement zeigen",
-        text: "Auch das Teilen unserer Arbeit und der Austausch mit anderen Tierfreunden helfen unserem Verein.",
-    },
-];
-
 export default function SupportSection() {
     return (
-        <Section
-            surface="strong"
-            id="unterstuetzen"
-            contentClassName={styles.supportLayout}
-        >
-                <div className={styles.supportIntro}>
-                    <Typography variant="eyebrow">
-                        Gemeinsam für Tiere
-                    </Typography>
-
-                    <Typography variant="h2" size="display">
-                        Gute Veränderung
-                        <br />
-                        beginnt mit <em>uns.</em>
-                    </Typography>
-
-                    <Typography variant="body1">
-                        Tierschutz braucht Menschen, die mithelfen.
-                        Jede Unterstützung macht einen Unterschied –
-                        für die Tiere, die heute auf uns angewiesen sind,
-                        und für die Zukunft des Helenenhofs.
-                    </Typography>
-
-                    <Button
-                        variant="light"
-                        href="/?WORK_IN_PROGRESS"
-                    >
-                        Alle Möglichkeiten entdecken
-                    </Button>
-                </div>
-
-                <div className={styles.supportList}>
-                    {waysToHelp.map((item) => (
-                        <article className={styles.supportItem} key={item.title}>
-                            <div>
-                                <Typography variant="h3">{item.title}</Typography>
-                                <Typography variant="body1">{item.text}</Typography>
-                            </div>
-                        </article>
-                    ))}
-                </div>
+        <Section surface="strong" id="unterstuetzen" contentClassName={styles.layout}>
+            <div className={styles.copy}>
+                <Typography variant="eyebrow">Helfen Sie mit</Typography>
+                <Typography variant="h2" size="display">
+                    Kleine Beiträge.{" "}<br /><em>Große Hilfe.</em>
+                </Typography>
+                <Typography variant="body1" className={styles.lead}>
+                    Über Unterstützung für die Tiere freuen wir uns.
+                </Typography>
+                <Typography variant="body1">
+                    Tierpatenschaften und andere finanzielle Fördermöglichkeiten machen die Versorgung planbar und dauerhaft möglich.
+                </Typography>
+                <Typography variant="body1">
+                    Jeder Euro hilft. Etwas Sinnvolles zu tun, kann so einfach sein…
+                </Typography>
+            </div>
+            <img
+                className={[styles.image, "support-image"].join(" ")}
+                src="/images/home/tierpatenschaft-kaninchen.png"
+                alt="Eine Person füttert ein braunes Schlappohrkaninchen mit Löwenzahn"
+                loading="lazy"
+            />
+            <div className={[styles.actions, "support-actions"].join(" ")} aria-label="Möglichkeiten zu helfen">
+                <Typography component="p" variant="eyebrow" className={styles.actionsHeading}>
+                    So können Sie helfen
+                </Typography>
+                <Button href="/unterstuetzen#spenden">Jetzt spenden <span aria-hidden="true">→</span></Button>
+                <Button href="/unterstuetzen#mitgliedschaft" variant="light">Mitglied werden <span aria-hidden="true">→</span></Button>
+                <Button href="/unterstuetzen#patenschaften" variant="light">Tierpatenschaft übernehmen <span aria-hidden="true">→</span></Button>
+            </div>
         </Section>
     );
 }

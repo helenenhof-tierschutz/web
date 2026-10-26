@@ -60,7 +60,7 @@ const styles = {
         font-size: 1.5rem;
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
-        @media (max-width: 760px) { display: block; }
+        @media (max-width: 1050px) { display: block; }
     `,
     nav: css`
         display: flex;
@@ -78,7 +78,7 @@ const styles = {
         @media (max-width: 1000px) {
             & > a:not(.${buttonStyles}) { font-size: 0.77rem; }
         }
-        @media (max-width: 760px) {
+        @media (max-width: 1050px) {
             position: absolute;
             top: calc(100% - 1px);
             right: 0;
@@ -102,7 +102,7 @@ const styles = {
         }
     `,
     navOpen: css`
-        @media (max-width: 760px) {
+        @media (max-width: 1050px) {
             display: flex;
             flex-direction: column;
         }
@@ -130,6 +130,9 @@ export default function Header() {
                 <button
                     className={styles.menuToggle}
                     type="button"
+                    aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
+                    aria-controls="main-navigation"
+                    aria-expanded={menuOpen}
                     onClick={() => setMenuOpen((open) => !open)}
                 >
                     {menuOpen ? "✕" : "☰"}
@@ -137,14 +140,22 @@ export default function Header() {
 
                 <nav
                     id="main-navigation"
+                    aria-label="Hauptnavigation"
                     className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}
                 >
                     <a href="/unsere-schuetzlinge">
                         Unsere Schützlinge
                     </a>
 
+                    <a href="/helenenhof">
+                        Der Helenenhof
+                    </a>
+
                     <a href="/ueber-uns">
                         Über uns
+                    </a>
+                    <a href="/kontakt">
+                        Kontakt
                     </a>
                     <a
                         className={`${styles.button} ${styles.buttonSmall}`}

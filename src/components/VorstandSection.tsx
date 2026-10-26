@@ -1,5 +1,4 @@
 import { css } from "@emotion/css";
-import Box from "./Box";
 import Grid from "./Grid";
 import Section from "./Section";
 import Typography from "./Typography";
@@ -12,10 +11,30 @@ const styles = {
         @media (max-width: 640px) { margin-bottom: 30px; }
     `,
     memberInfo: css`
-        padding-top: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        padding: clamp(24px, 3vw, 36px);
+        background: var(--color-cream-dark);
+        text-align: center;
         h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.3; }
         p { margin: 0; color: var(--color-text-light); font-size: 0.9rem; line-height: 1.6; }
-        .memberDescription { margin-top: 12px; }
+    `,
+    portraitCrop: css`
+        width: 128px;
+        height: 128px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        border-radius: 50%;
+    `,
+    portrait: css`
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
     `,
 };
 
@@ -23,32 +42,33 @@ const vorstandMembers = [
     {
         name: "Ursula Kals",
         role: "Vorsitzende",
-        description:
-            "Als leidenschaftliche Tierfreundin hat Ursula Kals den Helenenhof ins Leben gerufen. Mit viel Herzblut setzt sie sich dafür ein, Tieren in Not ein sicheres Zuhause zu geben.",
-        image: "/images/ursula-kals.webp",
     },
     {
         name: "Claus M. Wolf",
         role: "Stellvertretender Vorsitzender",
-        description:
-            "Claus Wolf ist Katzenliebhaber durch und durch. In seinem Zuhause im schönen Eilendorf dreht sich vieles um seine geliebten Vierbeiner.",
-        image: "/images/claus-wolf.jpg",
+        image: "/images/team/claus-michael-wolf.jpg",
     },
     {
         name: "Constantin Kals",
         role: "Schatzmeister",
-        image: "/images/constantin-kals.jpg",
-        description:
-            "Constantin Kals kümmert sich um die Finanzen und die Organisation im Hintergrund. Bei Fragen zu Spenden und finanzieller Unterstützung ist er der richtige Ansprechpartner.",
+        image: "/images/team/constantin-kals.webp",
+        imageScale: 1.25,
+        imageTransformOrigin: "left 30%",
     },
 ];
 
 export default function VorstandSection() {
     return (
-        <Section surface="none">
+        <Section surface="soft">
             <header className={styles.heading}>
-                <Typography variant="eyebrow">Helenenhof</Typography>
-                <Typography variant="h2" id="vorstand-title">Der Vorstand</Typography>
+                <Typography variant="eyebrow">Unser Team</Typography>
+                <Typography variant="h2" size="display" id="vorstand-title">
+                    Menschen, die sich kümmern.<br />
+                    <em>Mit Herz und Verantwortung.</em>
+                </Typography>
+                <Typography variant="body1" color="muted">
+                    Der gewählte Vorstand besteht derzeit aus:
+                </Typography>
             </header>
 
             <Grid container spacing={3}>
@@ -58,23 +78,23 @@ export default function VorstandSection() {
                         size={{ xs: 12, md: 4 }}
                         key={member.name}
                     >
-                        <Box
-                            as="img"
-                            sx={{
-                                width: "100%",
-                                aspectRatio: { xs: "4 / 3", sm: "4 / 5" },
-                                objectFit: "cover",
-                                objectPosition: { xs: "center 35%", sm: "center 28%" },
-                                backgroundColor: "var(--color-cream-dark)",
-                            }}
-                            src={member.image}
-                            alt={member.name}
-                            loading="lazy"
-                        />
                         <div className={styles.memberInfo}>
+                            {member.image && (
+                                <div className={styles.portraitCrop}>
+                                    <img
+                                        className={styles.portrait}
+                                        src={member.image}
+                                        alt={member.name}
+                                        loading="lazy"
+                                        style={member.imageScale ? {
+                                            transform: `scale(${member.imageScale})`,
+                                            transformOrigin: member.imageTransformOrigin,
+                                        } : undefined}
+                                    />
+                                </div>
+                            )}
                             <Typography variant="h3">{member.name}</Typography>
                             <Typography variant="body1">{member.role}</Typography>
-                            <Typography variant="body1">{member.description}</Typography>
                         </div>
                     </Grid>
                 ))}

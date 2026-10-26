@@ -63,17 +63,16 @@ export default function LocationMap() {
     return (
         <Section surface="medium" contentClassName={styles.mapLayout}>
             <div className={styles.mapIntro}>
-                <Typography variant="eyebrow">Hier sind wir</Typography>
-                <Typography variant="h2" id="location-title">Besuchen Sie uns</Typography>
+                <Typography variant="eyebrow">Hier liegt der Hof</Typography>
+                <Typography variant="h2" id="location-title">Der Standort in Steckenborn</Typography>
                 <address>
                     In Steckenborn 35
                     <br />
                     52152 Simmerath
                 </address>
                 <Typography variant="body1">
-                    Der Helenenhof liegt im idyllischen Steckenborn, oberhalb des Rursees in der Nordeifel.
-                    Besuche auf unserem Hof sind nach vorheriger Anmeldung herzlich willkommen. Gerne geben wir Ihnen einen Einblick in unsere Arbeit und stellen Ihnen unsere tierischen Bewohner vor.
-                    Bitte vereinbaren Sie vor Ihrem Besuch einen Termin, damit wir uns ausreichend Zeit für Sie nehmen können.
+                    Der Helenenhof liegt in Steckenborn auf den Höhen über dem Rursee in der Nordeifel.
+                    Besuche sind derzeit noch nicht möglich.
                 </Typography>
             </div>
 

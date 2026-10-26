@@ -1,44 +1,49 @@
+import { css } from "@emotion/css";
 import Grid from "./Grid";
 import Image from "./Image";
 import Section from "./Section";
 import Typography from "./Typography";
 
+const styles = {
+    text: css`
+        max-width: 590px;
+        p { color: var(--color-text-light); line-height: 1.8; }
+    `,
+};
+
 export default function VereinSection() {
     return (
-        <Section surface="none">
-            <Grid container spacing={6}>
+        <Section surface="soft">
+            <Grid container spacing={{ xs: 2, md: 6 }} alignItems="center">
                 <Grid size={{ xs: 12, md: 6 }}>
-                    <div>
-                        <Typography variant="eyebrow">Tierschutz in der Nordeifel</Typography>
-                        <Typography variant="h1">
-                            Unser <em>Verein.</em>
-                        </Typography>
-                        <Typography variant="subtitle1" color="main">
-                            Der Helenenhof liegt im schönen Dorf Steckenborn auf den
-                            Höhen über dem Rursee in der Nordeifel. Dort, wo die Welt
-                            noch ein wenig heiler ist.
+                    <div className={styles.text}>
+                        <Typography variant="eyebrow">Der Verein</Typography>
+                        <Typography variant="h2" size="display">
+                            Gemeinsam gegründet.<br />
+                            <em>Für Tiere da.</em>
                         </Typography>
                         <Typography variant="body1" color="muted">
-                            Wir arbeiten mit Ruhe, Geduld und Verantwortung. Nicht die
-                            schnelle Aufnahme möglichst vieler Tiere steht im
-                            Mittelpunkt, sondern eine gute, langfristig tragfähige
-                            Versorgung jedes einzelnen Tieres.
+                            So haben wir in einer generationsübergreifenden
+                            Gründungsgruppe – der Jüngste 18 Jahre, die Älteste 74 Jahre –
+                            den Verein ins Leben gerufen. Künftig möchten wir noch mehr
+                            verwaisten Tieren ein sicheres Heim bieten können.
                         </Typography>
                         <Typography variant="body1" color="muted">
                             Ins Leben gerufen wurde unser Verein am 24. Mai 2026 in
-                            Aachen, unter den Gründungsmitgliedern ein Student, ein
-                            Theologe und eine pensionierte Buchhalterin. Alle motiviert
-                            durch den Wunsch, den Blick auf Lebewesen zu lenken, denen
-                            oft übel mitgespielt wird.
+                            Aachen, unter den Gründungsmitgliedern ein Informatikstudent,
+                            ein Theologe und eine pensionierte Buchhalterin. Alle
+                            motiviert durch den Wunsch, den Blick auf Lebewesen zu
+                            lenken, denen oft übel mitgespielt wird.
                         </Typography>
                     </div>
                 </Grid>
-
                 <Grid size={{ xs: 12, md: 6 }}>
                     <Image
-                        src="/images/8244ED9C-F66E-4908-BE66-2032255CF58A.jpeg"
-                        alt="Das malerische Außengelände des Helenenhofes"
-                        loading="lazy"
+                        src="/images/home/kaninchen-beim-fressen.webp"
+                        alt="Kaninchen fressen gemeinsam Gemüse im Außengehege"
+                        loading="eager"
+                        displayHeight="430px"
+                        mobileHeight="300px"
                     />
                 </Grid>
             </Grid>
